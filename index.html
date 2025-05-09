@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sufi Interpretation Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Link to Vis.js Network CSS (example using CDN) -->
+  <link href="https://unpkg.com/vis-network/styles/vis-network.min.css" rel="stylesheet" type="text/css" />
+  <style>
+    /* Basic in-page styles for layout - move to style.css for production */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      flex-grow: 1;
+    }
+
+    #graph-section {
+      flex: 3;
+      min-width: 600px;
+      margin-right: 10px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #graph-container {
+      width: 100%;
+      height: 650px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    #info-section {
+      flex: 1;
+      min-width: 300px;
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      max-height: 650px;
+    }
+
+    .controls {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #eee;
+      border-radius: 5px;
+    }
+
+    .controls label {
+      margin-right: 5px;
+    }
+
+    .controls input[type="text"],
+    .controls select {
+      padding: 8px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #info-panel h3 {
+      margin-top: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    #info-panel ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    #info-panel li {
+      background-color: #f9f9f9;
+      margin-bottom: 5px;
+      padding: 8px;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    #tables-section {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #tables-section h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .table-container {
+      margin-bottom: 20px;
+    }
+
+    .table-container h3 {
+      margin-bottom: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+      font-size: 0.9em;
+    }
+
+    th {
+      background-color: #e9e9e9;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4cae4c;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>The Quranic Sufi Interpretation Graph</h1>
+  </header>
+
+  <div class="container">
+    <section id="graph-section">
+      <div class="controls">
+        <label for="searchInput">Search:</label>
+        <input type="text" id="searchInput" placeholder="Enter node name or ID...">
+
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="concept">Concept</option>
+          <option value="practice">Practice / Technique</option>
+          <option value="analogy">Analogy / Metaphor</option>
+          <option value="segment">Segment Stub</option>
+        </select>
+      </div>
+      <div id="graph-container">
+        <!-- Vis.js graph will be rendered here -->
+      </div>
+    </section>
+
+    <aside id="info-section">
+      <h2>Node Information</h2>
+      <div id="info-panel">
+        <p><strong>ID:</strong> <span id="node-id-display">-</span></p>
+        <p><strong>Name:</strong> <span id="node-name-display">-</span></p>
+        <p><strong>Category:</strong> <span id="node-category-display">-</span></p>
+        <p><strong>Description/Summary:</strong></p>
+        <p id="node-description-display">-</p>
+
+        <h3>Direct Connections:</h3>
+        <ul id="node-connections-list">
+          <!-- Connected nodes will be listed here -->
+        </ul>
+
+        <h3>Segments Tied To This Node:</h3>
+        <ul id="node-segments-list">
+          <!-- Related segments will be listed here -->
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <section id="tables-section">
+    <h2>Data Tables</h2>
+    <div class="table-container">
+      <h3>Concepts</h3>
+      <table id="concepts-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody><!-- Data will be populated by JavaScript --></tbody>
+      </table>
+    </div>
+    <div class="table-container">
+      <h3>Practices / Techniques</h3>
+      <table id="practices-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="table-container">
+      <h3>Analogies / Metaphors</h3>
+      <table id="analogies-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="table-container">
+      <h3>Segments</h3>
+      <table id="segments-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Timestamp Range</th>
+            <th>Summary</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="button-container">
+    <button id="exportJsonButton">Export Graph to JSON</button>
+  </div>
+
+  <!-- Vis.js Network library (example using CDN) -->
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <!-- Your application's JavaScript -->
+  <script src="app.js"></script>
+</body>
+
+</html>
