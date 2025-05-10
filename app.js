@@ -1,5 +1,3 @@
-// app.js
-
 document.addEventListener('DOMContentLoaded', function () {
   // --- DOM Elements ---
   const graphContainer = document.getElementById('graph-container');
@@ -858,6 +856,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchTerm = searchInput.value.toLowerCase();
     const selectedCategory = categoryFilter.value;
 
+    // Check if filters are being cleared (empty search + all categories)
+    const isFilterCleared = searchTerm === '' && selectedCategory === 'all';
+
     const filteredNodeIds = allNodes
       .filter(node => {
         const nameMatch = node.title.toLowerCase().includes(searchTerm);
@@ -866,6 +867,13 @@ document.addEventListener('DOMContentLoaded', function () {
         return (nameMatch || descriptionMatch) && categoryMatch;
       })
       .map(node => node.id);
+
+    // If no nodes match the search and the search isn't empty, don't show anything
+    if (filteredNodeIds.length === 0 && searchTerm !== '') {
+      nodesDataSet.clear();
+      edgesDataSet.clear();
+      return;
+    }
 
     // Update Vis.js DataSet to show only filtered nodes and relevant edges
     nodesDataSet.clear();
@@ -877,11 +885,178 @@ document.addEventListener('DOMContentLoaded', function () {
     ));
 
     // Add minor animation when filtering
-    network.fit({ animation: { duration: 600, easingFunction: 'easeInOutQuad' } });
+    if (isFilterCleared) {
+      // When filters are cleared, do a more comprehensive reset
+      setTimeout(() => {
+        try {
+          // First fit to see everything
+          network.fit({
+            animation: {
+              duration: 400,
+              easingFunction: 'easeInOutQuad'
+            }
+          });
+
+          // Then if we have physics disabled, temporarily re-enable it to redistribute nodes
+          if (isStabilized) {
+            network.setOptions({ physics: { enabled: true } });
+
+            // After a short time, stabilize and disable physics again
+            setTimeout(() => {
+              network.stabilize(100);
+              setTimeout(() => {
+                network.setOptions({
+                  physics: {
+                    enabled: false,
+                    stabilization: {
+                      enabled: false
+                    },
+                    minVelocity: 5,
+                    maxVelocity: 20
+                  }
+                });
+              }, 1000);
+            }, 200);
+          } else {
+            // Just stabilize if physics is still enabled
+            network.stabilize(100);
+          }
+        } catch (e) {
+          console.error("Error resetting view:", e);
+        }
+      }, 50);
+    } else {
+      // For normal filtering, just fit the view if there are nodes to show
+      if (filteredNodeIds.length > 0) {
+        network.fit({
+          animation: {
+            duration: 600,
+            easingFunction: 'easeInOutQuad'
+          }
+        });
+      }
+    }
   }
 
-  searchInput.addEventListener('input', applyFilters);
+  // Search input event listener with improved handling for when search is cleared
+  searchInput.addEventListener('input', function () {
+    // Check if search was just cleared (input is now empty)
+    if (this.value === '' && categoryFilter.value === 'all') {
+      // Similar reset logic as in clear button
+      nodesDataSet.clear();
+      edgesDataSet.clear();
+
+      // Add all nodes and edges back
+      nodesDataSet.add(allNodes);
+      edgesDataSet.add(allEdges);
+
+      if (network) {
+        try {
+          // Reset the view
+          network.fit({
+            animation: {
+              duration: 400,
+              easingFunction: 'easeInOutQuad'
+            }
+          });
+        } catch (e) {
+          console.error("Error resetting view:", e);
+        }
+      }
+    }
+
+    // Apply the standard filters
+    applyFilters();
+  });
+
   categoryFilter.addEventListener('change', applyFilters);
+
+  // Add a clear button for the search field
+  if (searchInput) {
+    const clearSearchBtn = document.createElement('button');
+    clearSearchBtn.innerHTML = '<i class="fas fa-times"></i>';
+    clearSearchBtn.className = 'clear-search';
+    clearSearchBtn.title = 'Clear search';
+    clearSearchBtn.style.position = 'absolute';
+    clearSearchBtn.style.right = '10px';
+    clearSearchBtn.style.top = '50%';
+    clearSearchBtn.style.transform = 'translateY(-50%)';
+    clearSearchBtn.style.background = 'none';
+    clearSearchBtn.style.border = 'none';
+    clearSearchBtn.style.color = '#917c2e';
+    clearSearchBtn.style.cursor = 'pointer';
+    clearSearchBtn.style.display = 'none'; // Initially hidden
+
+    // Add clear button to the search container
+    const searchContainer = document.querySelector('.search-container');
+    if (searchContainer) {
+      searchContainer.style.position = 'relative';
+      searchContainer.appendChild(clearSearchBtn);
+
+      // Show/hide clear button based on search input
+      searchInput.addEventListener('input', function () {
+        clearSearchBtn.style.display = this.value ? 'block' : 'none';
+      });
+
+      // Clear search when button is clicked
+      clearSearchBtn.addEventListener('click', function () {
+        searchInput.value = '';
+        clearSearchBtn.style.display = 'none';
+        categoryFilter.value = 'all';
+
+        // Reset the visualization to its initial state
+        nodesDataSet.clear();
+        edgesDataSet.clear();
+
+        // Add all nodes and edges back
+        nodesDataSet.add(allNodes);
+        edgesDataSet.add(allEdges);
+
+        // Reset the view and redistribute nodes
+        if (network) {
+          try {
+            // First fit to see everything
+            network.fit({
+              animation: {
+                duration: 400,
+                easingFunction: 'easeInOutQuad'
+              }
+            });
+
+            // Temporarily re-enable physics to redistribute nodes
+            if (isStabilized) {
+              network.setOptions({ physics: { enabled: true } });
+
+              // After a short time, stabilize and disable physics again
+              setTimeout(() => {
+                network.stabilize(100);
+                setTimeout(() => {
+                  network.setOptions({
+                    physics: {
+                      enabled: false,
+                      stabilization: {
+                        enabled: false
+                      },
+                      minVelocity: 5,
+                      maxVelocity: 20
+                    }
+                  });
+                }, 1000);
+              }, 200);
+            } else {
+              // Just stabilize if physics is still enabled
+              network.stabilize(100);
+            }
+          } catch (e) {
+            console.error("Error resetting view:", e);
+          }
+        }
+
+        // Call applyFilters to handle the rest of the reset logic
+        applyFilters();
+      });
+    }
+  }
 
   // --- Populate HTML Tables ---
   function populateTables() {
