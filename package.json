@@ -1,0 +1,18 @@
+{
+  "name": "sufieye",
+  "version": "1.0.0",
+  "description": "Sufi Interpretation Explorer",
+  "scripts": {
+    "start": "bun run server.js",
+    "build": "bun run build.js",
+    "dev": "bun --serve",
+    "prod": "mkdir -p dist && npm run build && cd dist && bun --serve"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.25.0"
+  }
+}

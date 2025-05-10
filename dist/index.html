@@ -19,18 +19,7 @@
   <link href="https://unpkg.com/vis-network/styles/vis-network.min.css" rel="stylesheet" type="text/css" />
 
   <!-- Dynamically load either dev or production CSS -->
-  <script>
-    // Function to check if we should use production files
-    function isProduction() {
-      // Check for 'prod' in URL parameters
-      return window.location.search.includes('prod') ||
-        window.location.hostname.includes('vercel.app') ||
-        window.location.hostname !== 'localhost';
-    }
-
-    // Add the appropriate CSS file
-    document.write('<link rel="stylesheet" href="' + (isProduction() ? 'style.min.css' : 'style.css') + '">');
-  </script>
+  <link rel="stylesheet" href="style.css">
 
   <!-- Fallback CSS if JavaScript is disabled -->
   <noscript>
@@ -213,23 +202,7 @@
   <!-- Vis.js Network library -->
   <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 
-  <!-- Dynamically load either dev or production JS -->
-  <script>
-    // Load the appropriate JS file
-    document.write('<script src="' + (isProduction() ? 'app.min.js' : 'app.js') + '"><\/script>');
-
-    // Add an indicator of which environment we're in (only visible in development)
-    window.addEventListener('DOMContentLoaded', function () {
-      const envIndicator = document.getElementById('env-indicator');
-      if (envIndicator) {
-        const env = isProduction() ? 'Production' : 'Development';
-        envIndicator.textContent = env + ' Mode';
-        envIndicator.style.fontSize = '12px';
-        envIndicator.style.opacity = isProduction() ? '0' : '0.7';
-        envIndicator.style.marginTop = '10px';
-      }
-    });
-  </script>
+  <script src="app.js"></script>
 
   <!-- Fallback JS if JavaScript is partially disabled -->
   <noscript>

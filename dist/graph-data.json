@@ -1,0 +1,2475 @@
+{
+  "nodes": [
+    {
+      "id": "concept:SufiInterpretation",
+      "name": "Sufi Interpretation",
+      "category": "concept",
+      "description": "A unique Sufi understanding of religious texts and reality, focusing on inner meanings, non-duality, and the experiential nature of faith."
+    },
+    {
+      "id": "concept:Quran",
+      "name": "The Quran",
+      "category": "concept",
+      "description": "The holy book, viewed by Ahmed Hulusi not as a historical narrative or a book of literal commands from an external God, but as the Knowledge of the Reality and the System (Sunnatullah) disclosed to consciousness."
+    },
+    {
+      "id": "concept:Allah",
+      "name": "Allah",
+      "category": "concept",
+      "description": "The One, Absolute Essence (Dhat), the reality of the Names (Al-Asma ul-Husna). Not an external deity but the infinite, limitless, and indivisible ONENESS that comprises all existence."
+    },
+    {
+      "id": "concept:AhmedHulusi",
+      "name": "Ahmed Hulusi",
+      "category": "concept",
+      "description": "The author and contemporary Islamic philosopher presenting this unique Sufi interpretation of the Quran."
+    },
+    {
+      "id": "concept:KnowledgeOfAllah",
+      "name": "Knowledge Of Allah",
+      "category": "concept",
+      "description": "Understanding Allah not as an external deity 'up in the heavens' but as the essential reality of one's own being and all existence, through the manifestation of His Names."
+    },
+    {
+      "id": "concept:AlAsmaUlHusna",
+      "name": "Al-Asma Ul-Husna (The Beautiful Names)",
+      "category": "concept",
+      "description": "The Beautiful Names of Allah, representing the infinite qualities, attributes, and creational properties that compose and govern all existence. They are the structural compositions manifesting the totality of universal dimensions."
+    },
+    {
+      "id": "concept:NonDuality",
+      "name": "Non-Duality (Wahdat al-Wujud)",
+      "category": "concept",
+      "description": "The Sufi concept of the oneness of existence. There is no 'other' that exists apart from Allah; all manifestation is a reflection of His Names."
+    },
+    {
+      "id": "concept:DualityShirq",
+      "name": "Duality (Shirq)",
+      "category": "concept",
+      "description": "The misconception of an 'other' (e.g., an external God, one's ego, other beings with independent power) existing apart from or alongside Allah. Considered the gravest offense in this interpretation."
+    },
+    {
+      "id": "concept:LetterB",
+      "name": "The Letter 'B' (ب)",
+      "category": "concept",
+      "description": "The first letter of the Basmalah and the Quran. Interpreted as a mystical key signifying 'with/by/in/through' the essence of Allah, pointing to an introspective understanding of reality and the idea that one's being is comprised of the Names of Allah."
+    },
+    {
+      "id": "concept:ThePointBeneathTheB",
+      "name": "The Point Beneath The 'B'",
+      "category": "concept",
+      "description": "A profound symbol in Sufism, attributed to Ali (ra), representing the singular essence of all knowledge and existence, from which all multiplicity arises. It signifies the holographic principle where the whole is in the part."
+    },
+    {
+      "id": "concept:HolographicReality",
+      "name": "Holographic Reality/Universe",
+      "category": "concept",
+      "description": "The principle that the whole of existence is contained within each part, and each part reflects the whole. Every iota of existence potentially contains the entirety of Al-Asma (the Names)."
+    },
+    {
+      "id": "concept:Sunnatullah",
+      "name": "Sunnatullah (System of Allah)",
+      "category": "concept",
+      "description": "The unalterable System, Laws, and Order of Allah; the mechanics of the manifested worlds and the principles governing existence and its consequences. The Quran is seen as the knowledge of this system."
+    },
+    {
+      "id": "concept:Rabb",
+      "name": "Rabb (Lord/Sustainer)",
+      "category": "concept",
+      "description": "The source of the infinite meanings of the Names of Allah that constitute one's essential reality. The specific Name-composition that forms and sustains an individual being."
+    },
+    {
+      "id": "concept:Rasul",
+      "name": "Rasul (Messenger)",
+      "category": "concept",
+      "description": "A locus of Allah's knowledge; one through whom divine knowledge (Reality and Sunnatullah) is expressed and disseminated, often via revelation (irsal) to their consciousness."
+    },
+    {
+      "id": "concept:RevelationIrsal",
+      "name": "Revelation (Irsal)",
+      "category": "concept",
+      "description": "The dimensional disclosure of knowledge from the Rabb (one's essential reality of Names) to the consciousness of a Rasul. Not a book sent from a physical heaven."
+    },
+    {
+      "id": "concept:Self",
+      "name": "The Self (Universal Self)",
+      "category": "concept",
+      "description": "The essential reality of a being, the pure Universal Consciousness or Universal Intellect (Aql-i kull). This is distinct from the individual ego-self."
+    },
+    {
+      "id": "concept:IndividualConsciousness",
+      "name": "Individual Consciousness",
+      "category": "concept",
+      "description": "The limited consciousness of an individual, an output of the brain, formed by genetic inheritances, environmental conditionings, astrological influences, and the ego-driven sense of 'I'."
+    },
+    {
+      "id": "concept:UniversalConsciousness",
+      "name": "Universal Consciousness (Aql-i kull)",
+      "category": "concept",
+      "description": "Pure consciousness, the Universal Intellect. Humans are beings with this pure universal consciousness who have opened their eyes in an earthly body."
+    },
+    {
+      "id": "concept:EgoNafs",
+      "name": "Ego (Nafs / Illusory Self)",
+      "category": "concept",
+      "description": "The illusory self, the sense of 'I'ness that perceives itself as separate from Allah. It's the source of duality (shirq) and veiling from the reality. Often associated with the physical body and its desires."
+    },
+    {
+      "id": "concept:VicegerentKhalifa",
+      "name": "Vicegerent (Khalifa)",
+      "category": "concept",
+      "description": "Man's designated role on earth (representing the body or the planet). A conscious being who lives with the awareness of the Names of Allah and manifests their qualities."
+    },
+    {
+      "id": "concept:ParadiseJannah",
+      "name": "Paradise (Jannah)",
+      "category": "concept",
+      "description": "Not merely a physical place, but a state of life experienced by humans whose angelic qualities (manifestations of the Names) become active. A realm of blissful experience arising from one's essence."
+    },
+    {
+      "id": "concept:HellJahannam",
+      "name": "Hell (Jahannam)",
+      "category": "concept",
+      "description": "A state of existence characterized by burning and suffering, resulting from being driven by earthly/bodily desires, denying one's essential reality, and the confinement of consciousness. Also, the deep remorse of squandered potential."
+    },
+    {
+      "id": "concept:DoomsdayQiyamah",
+      "name": "Doomsday (Qiyamah / The Hour)",
+      "category": "concept",
+      "description": "Primarily refers to one's personal death, the lifting of the veil of the body, where the individual observes their own reality and begins to live the consequences of their earthly life. Also refers to larger cosmic transformations."
+    },
+    {
+      "id": "concept:AfterlifeAkhira",
+      "name": "Afterlife (Akhira)",
+      "category": "concept",
+      "description": "The eternal continuation of existence in different dimensions after the death of the physical body. A state of living the consequences of one's earthly deeds and beliefs."
+    },
+    {
+      "id": "concept:ResurrectionBath",
+      "name": "Resurrection (Ba'th)",
+      "category": "concept",
+      "description": "The transition to another dimension of life after death, often with a spirit body. Also refers to the emergence of new states of consciousness or understanding in earthly life."
+    },
+    {
+      "id": "concept:AngelsMalaika",
+      "name": "Angels (Malaika)",
+      "category": "concept",
+      "description": "Potentials, forces, or energies arising from the Names of Allah that carry out specific functions in the cosmos and within the human being. The higher state of everything in existence is angelic."
+    },
+    {
+      "id": "concept:Jinn",
+      "name": "Jinn",
+      "category": "concept",
+      "description": "Invisible beings or forces, distinct from angels, that can interact with humans and are also subject to the laws of existence. Some can be misleading."
+    },
+    {
+      "id": "concept:SatanIblis",
+      "name": "Satan (Iblis / Shaytan)",
+      "category": "concept",
+      "description": "The force of illusion and ego-driven desires. The tendency in man to reduce his boundless consciousness to the base bodily state, leading to forgetfulness of the essential reality. Iblis represents the archetypal refusal to recognize the divine in creation due to arrogance."
+    },
+    {
+      "id": "concept:FaithIman",
+      "name": "Faith (Iman)",
+      "category": "concept",
+      "description": "The realization of consciousness, through intellect and analysis, that beyond the seeming reality of forms lies infinity. Belief in Allah (one's essential reality of Names) and the teachings of the Rasuls."
+    },
+    {
+      "id": "concept:Taqwa",
+      "name": "Taqwa (Protection/Fear of Allah)",
+      "category": "concept",
+      "description": "Protecting oneself from engaging in behaviors that may result in unfavorable expressions of the Names within one's essence, by being aware of Sunnatullah (the system of consequences)."
+    },
+    {
+      "id": "concept:Dhikr",
+      "name": "Dhikr (Remembrance)",
+      "category": "concept",
+      "description": "The remembrance of one's essential reality (Allah, the Names comprising one's being). The Quran itself is a Dhikr. Contemplation and specific practices can aid this remembrance."
+    },
+    {
+      "id": "concept:Hamd",
+      "name": "Hamd (Evaluation/Praise)",
+      "category": "concept",
+      "description": "The evaluation of universal perfection and the manifestations of Allah's Names in the corporeal worlds. Belongs only to Allah, as He is the evaluator of Himself through His creation."
+    },
+    {
+      "id": "concept:Tasbih",
+      "name": "Tasbih (Glorification)",
+      "category": "concept",
+      "description": "The act of everything in existence fulfilling its unique creational purpose and thereby glorifying Allah. For humans, it involves recognizing their servitude and living according to their essential reality."
+    },
+    {
+      "id": "concept:HU",
+      "name": "HU",
+      "category": "concept",
+      "description": "The Absolute Essence of Existence, the indescribable reality of Allah beyond all Names, attributes, concepts, or limitations. Signifies absolute obscurity and incomprehensibility to the limited human mind."
+    },
+    {
+      "id": "concept:ArRahman",
+      "name": "Ar-Rahman (The All-Merciful)",
+      "category": "concept",
+      "description": "One of Allah's Names. Signifies the materialization of the essence of every iota with Allah's Names in His knowledge; the quantum potential. The source of the entire creation and the Dimension of Names."
+    },
+    {
+      "id": "concept:ArRahim",
+      "name": "Ar-Rahim (The Bestower of Mercy)",
+      "category": "concept",
+      "description": "One of Allah's Names. The Name that brings the infinite qualities of Ar-Rahman into engendered existence (the world of acts). The observer of the potential, guiding conscious beings."
+    },
+    {
+      "id": "concept:AlMaleek",
+      "name": "Al-Maleek (The Sovereign One)",
+      "category": "concept",
+      "description": "One of Allah's Names. The Sovereign One, who manifests His Names as He wishes and governs them in the world of acts as He pleases. The one who has providence over all things."
+    },
+    {
+      "id": "concept:AlQuddus",
+      "name": "Al-Quddus (The Most Holy)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who is free and beyond being defined, conditioned, or limited by His manifest qualities and concepts, despite all existence being a disclosure of His Names."
+    },
+    {
+      "id": "concept:AsSalam",
+      "name": "As-Salam (The Source of Peace)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who enables a state of peace by emancipating individuals from the conditions of nature and bodily life, and endows the experience of 'certainty' (yakeen)."
+    },
+    {
+      "id": "concept:AlMuminNames",
+      "name": "Al-Mu'min (The Source of Faith)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who enables the awareness that He, by respect of His Names, is beyond what is perceived. This awareness reflects as 'faith' (iman)."
+    },
+    {
+      "id": "concept:AlMuhaymin",
+      "name": "Al-Muhaymin (The Guardian)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who maintains and protects the manifestations of His Names with His own system. Also relates to 'amanah' (trust), the consciousness of the Names."
+    },
+    {
+      "id": "concept:AlAziz",
+      "name": "Al-Aziz (The Almighty)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who, with His unchallengeable might, disposes as He wishes. Nothing can oppose His will. Works in parallel with Rabb."
+    },
+    {
+      "id": "concept:AlJabbar",
+      "name": "Al-Jabbar (The Compeller)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One whose will is compelling. The corporeal worlds are compelled to comply with His demands, expressed through the essence of beings."
+    },
+    {
+      "id": "concept:TriggerSystem",
+      "name": "The Trigger System (Sunnatullah)",
+      "category": "concept",
+      "description": "The mechanism within Sunnatullah where qualities denoted by certain Names of Allah naturally and automatically trigger the expressions of certain other Names, generating new manifestations and consequences."
+    },
+    {
+      "id": "concept:Uluhiyyah",
+      "name": "Uluhiyyah (Godhood/Divinity)",
+      "category": "concept",
+      "description": "The reality of Divinity. Encompasses both HU (Absolute Essence) and the realm of infinite points (Names) where each point is an individual composition of Names formed by observing knowledge through knowledge."
+    },
+    {
+      "id": "concept:ShadowExistence",
+      "name": "Shadow Existence (Holographic Existence)",
+      "category": "concept",
+      "description": "The idea that the things we perceive in the corporeal world do not exist in and by themselves but are compositions of Names that manifest according to the perceiver, like a shadow or hologram."
+    },
+    {
+      "id": "concept:Islam",
+      "name": "Islam (Submission)",
+      "category": "concept",
+      "description": "The state of submission to Allah. In its deepest sense, the conscious awareness and living according to the reality that the entire existence is in a state of submission to the System of Allah (Sunnatullah)."
+    },
+    {
+      "id": "concept:AbsoluteSelfSufficientOne",
+      "name": "The Absolute Self-Sufficient One (Al-Ahad-us-Samad)",
+      "category": "concept",
+      "description": "A core Quranic description of Allah (Surah Al-Ikhlas). Ahad (The One and Only, indivisible) and Samad (Absolute Self-Sufficient, free from need, to/from which nothing can be added/taken)."
+    },
+    {
+      "id": "concept:KnowledgeOfTheReality",
+      "name": "Knowledge of the Reality",
+      "category": "concept",
+      "description": "The core understanding conveyed in 'Decoding The Quran', focusing on Allah's oneness, the nature of existence as manifestations of His Names, and the introspective path to self-realization."
+    },
+    {
+      "id": "concept:AlFatiha",
+      "name": "Al-Fatiha (The Opening)",
+      "category": "concept",
+      "description": "The first chapter of the Quran, considered to contain the essence of the entire Quran. Its secret is said to be in the Basmalah."
+    },
+    {
+      "id": "concept:Basmalah",
+      "name": "Basmalah",
+      "category": "concept",
+      "description": "The phrase 'B-ismillahirahmanirahim' (In/With/By the name of Allah, the Rahman, the Rahim). The starting point for understanding the Quran through the lens of the letter 'B'."
+    },
+    {
+      "id": "concept:AgeOfAquarius",
+      "name": "Age of Aquarius",
+      "category": "concept",
+      "description": "An astrological reference mentioned by the author, signifying a time for renewal in understanding and outlook, including the approach to the Quran."
+    },
+    {
+      "id": "concept:MalaIAla",
+      "name": "Mala-i A'la (The Exalted Assembly)",
+      "category": "concept",
+      "description": "The Exalted Assembly of angels or higher conscious forces that govern and administer aspects of the cosmos. Humans can potentially interact with or receive inspiration from this assembly."
+    },
+    {
+      "id": "concept:Hadith",
+      "name": "Hadith",
+      "category": "concept",
+      "description": "Sayings, actions, or tacit approvals of Prophet Muhammad (saw), which serve as a secondary source of guidance in Islam."
+    },
+    {
+      "id": "concept:SufismTasawwuf",
+      "name": "Sufism (Tasawwuf)",
+      "category": "concept",
+      "description": "The mystical dimension of Islam focused on direct, experiential knowledge of God/Reality, inner purification, and the journey of the self towards its essential reality."
+    },
+    {
+      "id": "concept:PureSpirit",
+      "name": "The Pure Spirit (Ruh al-Qudus / Spirit)",
+      "category": "concept",
+      "description": "Often identified with Gabriel (Jibril). Represents the force of divine knowledge, the channel of revelation, and a specific configuration of Names. The 'Spirit' breathed into Adam also refers to the manifestation of Allah's Names."
+    },
+    {
+      "id": "concept:Fitrah",
+      "name": "Fitrah (Natural Disposition)",
+      "category": "concept",
+      "description": "The primordial state or natural disposition upon which humans are created, inherently inclined towards recognizing the Oneness of Allah (Islam)."
+    },
+    {
+      "id": "concept:AlKhaliq",
+      "name": "Al-Khaliq (The Creator)",
+      "category": "concept",
+      "description": "One of Allah's Names. The ONE Absolute Creator! The One who brings individuals into existence from nothingness, with His Names, each with a unique purpose and predisposition."
+    },
+    {
+      "id": "concept:AlBari",
+      "name": "Al-Bari (The Producer/Evolver)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who fashions all of creation (from micro to macro) with unique functions and designs yet all in conformity with the whole."
+    },
+    {
+      "id": "concept:AlMusawwir",
+      "name": "Al-Musawwir (The Fashioner of Forms)",
+      "category": "concept",
+      "description": "One of Allah's Names. The fashioner of forms. The One who exhibits 'meanings' as 'forms' and devises the mechanism in the perceiver to perceive them."
+    },
+    {
+      "id": "concept:AlGhaffar",
+      "name": "Al-Ghaffar (The Great Forgiver)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who, as requisites of divine power or wisdom, 'conceals' the inadequacies of those who recognize their shortcomings and wish to be freed from their consequences. The One who forgives."
+    },
+    {
+      "id": "concept:AlQahhar",
+      "name": "Al-Qahhar (The Subjugator)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who executes the effects of His Name 'Wahid' and renders invalid the seeming existence of the relative 'I'ness."
+    },
+    {
+      "id": "concept:AlWahhab",
+      "name": "Al-Wahhab (The Bestower)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who bestows and gives unrequitedly to those He wishes, oblivious of deservedness."
+    },
+    {
+      "id": "concept:ArRazzaq",
+      "name": "Ar-Razzaq (The Provider)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who provides all necessary nutrition for the survival of any unit of manifestation regardless of its plane of existence."
+    },
+    {
+      "id": "concept:AlFattah",
+      "name": "Al-Fattah (The Opener/Victor)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who generates expansion within individuals, enables recognition and observation of Reality, and opens paths to understanding and utilizing the unrecognized."
+    },
+    {
+      "id": "concept:AlAleem",
+      "name": "Al-Aleem (The All-Knowing)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who, with the quality of His knowledge, infinitely knows everything in every dimension with all its facets, as He is their creator and essence."
+    },
+    {
+      "id": "concept:AlQabid",
+      "name": "Al-Qabid (The Constrictor)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who exercises His verdict by retaining or constricting the essence of an individual's Name reality, leading to states of contraction or withdrawnness."
+    },
+    {
+      "id": "concept:AlBasit",
+      "name": "Al-Basit (The Expander)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who opens and expands; enables dimensional and in-depth sight and experience."
+    },
+    {
+      "id": "concept:AlKhafid",
+      "name": "Al-Khafid (The Abaser)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who abases or capacitates a state of existence far from reality. Forms the vision of multiplicity to conceal the reality of Oneness."
+    },
+    {
+      "id": "concept:ArRafi",
+      "name": "Ar-Rafi (The Exalter)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who exalts or elevates conscious beings to higher states of existence, enabling the realization of their essential reality."
+    },
+    {
+      "id": "concept:AlMuizz",
+      "name": "Al-Mu'izz (The Bestower of Honor)",
+      "category": "concept",
+      "description": "One of Allah's Names. The Giver of Honor. The One who bestows honor to whom He wishes and holds them in esteem over others."
+    },
+    {
+      "id": "concept:AlMudhill",
+      "name": "Al-Mudhill (The Dishonorer)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who exposes dishonor in some and degrades below others, often through the veil of 'I'ness (ego)."
+    },
+    {
+      "id": "concept:AsSami",
+      "name": "As-Sami (The All-Hearing)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who perceives His manifestations at every instance. The One who enables awareness and comprehension."
+    },
+    {
+      "id": "concept:AlBasir",
+      "name": "Al-Basir (The All-Seeing)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who is constantly observing His manifestations and evaluating their outputs."
+    },
+    {
+      "id": "concept:AlHakam",
+      "name": "Al-Hakam (The Judge)",
+      "category": "concept",
+      "description": "One of Allah's Names. The Absolute Judge whose judgment (verdict) is irresistibly applied according to Sunnatullah."
+    },
+    {
+      "id": "concept:AlAdl",
+      "name": "Al-Adl (The Just)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who provides each of His manifestations their due right in consonance with their creation program. Absolutely free from unjustness."
+    },
+    {
+      "id": "concept:AlLatif",
+      "name": "Al-Latif (The Subtle One)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who is subtly present in the depths of every manifestation. Whose favors are plentiful and often unnoticed."
+    },
+    {
+      "id": "concept:AlHabir",
+      "name": "Al-Habir (The All-Aware)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who is aware of the manifestations of His Names at all times and in all their details."
+    },
+    {
+      "id": "concept:AlHalim",
+      "name": "Al-Halim (The Forbearing)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who refrains from giving sudden (impulsive) reactions to events, but rather evaluates all situations in respect of their purpose of manifestation."
+    },
+    {
+      "id": "concept:AlAzim",
+      "name": "Al-Azim (The Magnificent)",
+      "category": "concept",
+      "description": "One of Allah's Names. The magnificent glory beyond any manifestation's capacity of comprehension."
+    },
+    {
+      "id": "concept:AlGhafur",
+      "name": "Al-Ghafur (The Forgiving)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One whose Mercy should never be doubted. The One who enables necessary cleansing and triggers the name Rahim to bestow blessings."
+    },
+    {
+      "id": "concept:AshShakur",
+      "name": "Ash-Shakur (The Appreciative)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who allows the proper use of His bestowals in order that He may increase them. Enables due evaluation of resources."
+    },
+    {
+      "id": "concept:AlAliy",
+      "name": "Al-Aliy (The Most High)",
+      "category": "concept",
+      "description": "One of Allah's Names. The Highest or the Sublime. The sublime One who observes existence from the point of reality (essence)."
+    },
+    {
+      "id": "concept:AlKabir",
+      "name": "Al-Kabir (The Great)",
+      "category": "concept",
+      "description": "One of Allah's Names. The magnitude of the worlds He created with His Names are incomprehensible."
+    },
+    {
+      "id": "concept:AlHafiz",
+      "name": "Al-Hafiz (The Preserver)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who provides all requirements to preserve and maintain existence."
+    },
+    {
+      "id": "concept:AlMuqeet",
+      "name": "Al-Muqeet (The Sustainer)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who facilitates the expression of the Name al-Hafiz by providing the necessary material and spiritual platform for it."
+    },
+    {
+      "id": "concept:AlHasib",
+      "name": "Al-Hasib (The Reckoner)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who maintains individuality by holding them to account of their behavioral output through the mechanics of 'consequence'."
+    },
+    {
+      "id": "concept:AlJalil",
+      "name": "Al-Jalil (The Majestic)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who, with His magnificent comprehensiveness and perfection, is the sultan of the world of acts."
+    },
+    {
+      "id": "concept:AlKarim",
+      "name": "Al-Karim (The Generous)",
+      "category": "concept",
+      "description": "One of Allah's Names. The exceedingly generous and bountiful One who bestows His bounties even upon those who deny His existence. The ability to READ (iqra) is linked to this Name."
+    },
+    {
+      "id": "concept:ArRaqib",
+      "name": "Ar-Raqib (The Watchful)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who watches over and keeps under control the manifestations of His Names, with His names, at all times."
+    },
+    {
+      "id": "concept:AlMujib",
+      "name": "Al-Mujib (The Responder)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who unequivocally responds to all who turn towards Him (in prayer and invocation) and provides their needs."
+    },
+    {
+      "id": "concept:AlWasi",
+      "name": "Al-Wasi (The All-Embracing)",
+      "category": "concept",
+      "description": "One of Allah's Names. The All-embracing. The One who embraces the whole of existence with the expressions of His Names."
+    },
+    {
+      "id": "concept:AlHakim",
+      "name": "Al-Hakim (The Wise)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One whose power of knowledge appears under the guise of 'causes', hence creating causality and leading to the perception of multiplicity."
+    },
+    {
+      "id": "concept:AlWadud",
+      "name": "Al-Wadud (The Loving One)",
+      "category": "concept",
+      "description": "One of Allah's Names. The creator of attraction. The creator of unconditional and unrequited love. The essence within every beloved."
+    },
+    {
+      "id": "concept:AlMajeed",
+      "name": "Al-Majeed (The Glorious)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One whose majestic glory is evident through His magnificent manifestations."
+    },
+    {
+      "id": "concept:AlBaith",
+      "name": "Al-Baith (The Resurrector)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who constantly transforms new dimensions of existence, creating new experiences. Related to resurrection after death and new states of life/consciousness."
+    },
+    {
+      "id": "concept:AshShahid",
+      "name": "Ash-Shahid (The Witness)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who witnesses His existence through His own existence. The One who observes the disclosure of His Names and witnesses His manifestations."
+    },
+    {
+      "id": "concept:AlHaqq",
+      "name": "Al-Haqq (The Truth)",
+      "category": "concept",
+      "description": "One of Allah's Names. The absolute and unequivocal reality. The source and essence of every function in manifestation."
+    },
+    {
+      "id": "concept:AlWakil",
+      "name": "Al-Wakil (The Trustee/Disposer of Affairs)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who provides the means for self-actualization. The One who advocates and protects those who place their trust in Him. Source of the mystery of vicegerency."
+    },
+    {
+      "id": "concept:AlQawwi",
+      "name": "Al-Qawwi (The Most Strong)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who transforms His power into the enabling potential for the manifestation of existence, comprising the force of the whole of existence. Forms the angelic state."
+    },
+    {
+      "id": "concept:AlMatin",
+      "name": "Al-Matin (The Firm/Steadfast)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who sustains the world of acts, the steadfast, the creator of robustness and stability, the provider of strength and resistance."
+    },
+    {
+      "id": "concept:AlWaliyy",
+      "name": "Al-Waliyy (The Protecting Friend/Guardian)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who guides and enables an individual to discover their reality and live according to their essence. Source of Risalah and Nubuwwah."
+    },
+    {
+      "id": "concept:AlHamid",
+      "name": "Al-Hamid (The Praiseworthy)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who observes and evaluates His universal perfection on worldly forms manifested by His Name al-Waliyy. Hamd belongs only to Him."
+    },
+    {
+      "id": "concept:AlMuhsi",
+      "name": "Al-Muhsi (The Accounter/Enumerator)",
+      "category": "concept",
+      "description": "One of Allah's Names. The creator of the 'forms' (micro to macro) comprising the seeming multiplicities, each equipped with unique qualities and attributes, within UNITY."
+    },
+    {
+      "id": "concept:AlMubdi",
+      "name": "Al-Mubdi (The Originator)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who originates the whole of creation in the corporeal worlds, all with exclusive and unique qualities."
+    },
+    {
+      "id": "concept:AlMuid",
+      "name": "Al-Mu'id (The Restorer)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who restores life to those who turn back to their essence."
+    },
+    {
+      "id": "concept:AlMuhyi",
+      "name": "Al-Muhyi (The Giver of Life)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who enlivens and enlightens. Enables the continuation of individual life through knowledge and observation of one's essential reality."
+    },
+    {
+      "id": "concept:AlMumit",
+      "name": "Al-Mumit (The Taker of Life)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who enables a 'taste' (experience) of death. Allows a transition between one state of existence to another."
+    },
+    {
+      "id": "concept:AlHayy",
+      "name": "Al-Hayy (The Ever-Living)",
+      "category": "concept",
+      "description": "One of Allah's Names. The source of names! The One who gives life to the Names and manifests them. The source of universal energy, the essence of energy."
+    },
+    {
+      "id": "concept:AlQayyum",
+      "name": "Al-Qayyum (The Self-Subsisting)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who renders Himself existent with His own attributes, without the need of anything. Everything in existence subsists with al-Qayyum."
+    },
+    {
+      "id": "concept:AlWajid",
+      "name": "Al-Wajid (The Perceiver/Finder)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One whose qualities and attributes are unfailingly abundant. The manifest One from which nothing lessens despite His abundant manifestations."
+    },
+    {
+      "id": "concept:AlMajidNames",
+      "name": "Al-Majid (The Illustrious/Noble - Name)",
+      "category": "concept",
+      "description": "One of Allah's Names. The magnificent and glorious One with unrestricted, infinite generosity and endowment (benevolence). Note: Different from Al-Majeed."
+    },
+    {
+      "id": "concept:AlWahid",
+      "name": "Al-Wahid (The One)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One and only. 'ONE'ness far beyond any concept of multiplicity, not composed of parts. Renders duality obsolete."
+    },
+    {
+      "id": "concept:AsSamad",
+      "name": "As-Samad (The Absolute/Eternal)",
+      "category": "concept",
+      "description": "One of Allah's Names. The Pure Whole One, free from multiplicity, conceptualization, and limitation. The self-sufficient One, in need of nothing. Bears no space or emptiness within it."
+    },
+    {
+      "id": "concept:AlQadir",
+      "name": "Al-Qadir (The All-Powerful)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who creates (discloses, manifests) and observes His knowledge with His power without depending on causality. Absolutely boundless."
+    },
+    {
+      "id": "concept:AlMuqtadir",
+      "name": "Al-Muqtadir (The Determiner/Prevailer)",
+      "category": "concept",
+      "description": "One of Allah's Names. The Determiner. The absolute possessor of all power pertaining to creation, governance, and disposition."
+    },
+    {
+      "id": "concept:AlMuqaddim",
+      "name": "Al-Muqaddim (The Expediter)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who expedites (or prioritizes) the manifestation of Names according to their purpose of creation."
+    },
+    {
+      "id": "concept:AlMuakhkhir",
+      "name": "Al-Mu'akhkhir (The Delayer)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who delays manifestation in consonance with His name al-Hakim."
+    },
+    {
+      "id": "concept:AlAwwal",
+      "name": "Al-Awwal (The First)",
+      "category": "concept",
+      "description": "One of Allah's Names. The first and initial state of existence, the essential Name."
+    },
+    {
+      "id": "concept:AlAkhir",
+      "name": "Al-Akhir (The Last)",
+      "category": "concept",
+      "description": "One of Allah's Names. The infinitely subsequent One, to all creation."
+    },
+    {
+      "id": "concept:AzZahir",
+      "name": "Az-Zahir (The Manifest)",
+      "category": "concept",
+      "description": "One of Allah's Names. The self-evident One, the explicit, unequivocal and perceivable manifestation."
+    },
+    {
+      "id": "concept:AlBatin",
+      "name": "Al-Batin (The Hidden)",
+      "category": "concept",
+      "description": "One of Allah's Names. The unperceivable reality within the perceivable manifestation. The source of the unknown."
+    },
+    {
+      "id": "concept:AlWali",
+      "name": "Al-Wali (The Governor - Name)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who governs according to His own verdict. Note: Different from Al-Waliyy."
+    },
+    {
+      "id": "concept:AlMutaali",
+      "name": "Al-Muta'ali (The Most Exalted)",
+      "category": "concept",
+      "description": "One of Allah's Names. The limitless, boundless Supreme One, whose supremacy encompasses everything. Beyond limitation by any mind or intellect."
+    },
+    {
+      "id": "concept:AlBarr",
+      "name": "Al-Barr (The Source of All Goodness)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who eases the actualization of individual temperaments and natural dispositions."
+    },
+    {
+      "id": "concept:AtTawwab",
+      "name": "At-Tawwab (The Acceptor of Repentance)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who guides individuals to their essence by enabling them to perceive and comprehend the reality. Allows repentance and triggers Rahim."
+    },
+    {
+      "id": "concept:AlMuntaqim",
+      "name": "Al-Muntaqim (The Avenger)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who makes individuals live the consequences of their actions that impede the realization of their essence. Enforces consequences without exception."
+    },
+    {
+      "id": "concept:AlAfuw",
+      "name": "Al-Afuw (The Pardoner)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who forgives all offences except for 'duality' (shirq). Forgiveness does not mean compensation for past losses in the system of sunnatullah."
+    },
+    {
+      "id": "concept:ArRauf",
+      "name": "Ar-Ra'uf (The Clement/Kind)",
+      "category": "concept",
+      "description": "One of Allah's Names. The compassionate and pitying One who protects individuals who turn to Him from harmful behaviors."
+    },
+    {
+      "id": "concept:MaalikulMulk",
+      "name": "Maalik-ul-Mulk (The Owner of All Sovereignty)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who governs His Sovereignty as He wishes without having to give account to any individual."
+    },
+    {
+      "id": "concept:DhulJalaliWalIkram",
+      "name": "Dhul-Jalali Wal-Ikram (Lord of Majesty and Generosity)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who makes individuals experience their 'nothingness' and then bestows them 'Eternity' by allowing them to observe the manifestations of the Names comprising their essence."
+    },
+    {
+      "id": "concept:AlMuqsit",
+      "name": "Al-Muqsit (The Equitable One)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who applies justice, as the requirement of His Uluhiyya, by endowing every individual their due, based on their unique creation purpose."
+    },
+    {
+      "id": "concept:AlJami",
+      "name": "Al-Jami (The Gatherer)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who observes the whole of existence as a multi-dimensional single frame in His Knowledge. Gathers creation according to their purpose."
+    },
+    {
+      "id": "concept:AlGhani",
+      "name": "Al-Ghani (The Self-Sufficient)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who is beyond being labeled and limited by the manifestations of His Names, as He is Great (Akbar). Infinitely abundant with His Names."
+    },
+    {
+      "id": "concept:AlMughni",
+      "name": "Al-Mughni (The Enricher)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who enriches individuals and raises them above others in wealth and emancipates them. Grants the beauty of infinity (baqa) from nothingness (fakr)."
+    },
+    {
+      "id": "concept:AlMani",
+      "name": "Al-Mani (The Preventer)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who prevents those from attaining things they do not deserve."
+    },
+    {
+      "id": "concept:AdDarr",
+      "name": "Ad-Darr (The Distresser)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who afflicts individuals with various distressing situations (sickness, suffering, trouble) in order to make them turn to Himself."
+    },
+    {
+      "id": "concept:AnNafi",
+      "name": "An-Nafi (The Propitious/Benefiter)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who prompts individuals to engage in good thoughts and actions to aid them towards beneficent and auspicious outcomes."
+    },
+    {
+      "id": "concept:AnNur",
+      "name": "An-Nur (The Light)",
+      "category": "concept",
+      "description": "One of Allah's Names. The Knowledge that is the source and essence of everything. The essence of everything is Nur (light/knowledge). Life subsists with knowledge."
+    },
+    {
+      "id": "concept:AlHadi",
+      "name": "Al-Hadi (The Guide)",
+      "category": "concept",
+      "description": "One of Allah's Names. The guide to the truth. The One who allows individuals to live according to their reality. The articulator of the truth."
+    },
+    {
+      "id": "concept:AlBadee",
+      "name": "Al-Badee (The Incomparable Originator)",
+      "category": "concept",
+      "description": "One of Allah's Names. The incomparable beauty and the originator of beautiful manifestation. Originates innumerable manifestations with unique qualities, without any prior example."
+    },
+    {
+      "id": "concept:AlBaqi",
+      "name": "Al-Baqi (The Everlasting)",
+      "category": "concept",
+      "description": "One of Allah's Names. The Everlasting. The One who exists beyond the concept of time."
+    },
+    {
+      "id": "concept:AlWarith",
+      "name": "Al-Warith (The Inheritor)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who manifests under various names and forms in order to inherit and protect the possessions of those who abandon all their belongings to undergo true transformation."
+    },
+    {
+      "id": "concept:ArRashid",
+      "name": "Ar-Rashid (The Guide to Right Path)",
+      "category": "concept",
+      "description": "One of Allah's Names. The guider to the right path. The One who allows individuals, who recognize their essential reality, to experience the maturity of this recognition."
+    },
+    {
+      "id": "concept:AsSabur",
+      "name": "As-Sabur (The Patient)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who waits for each individual to execute his creation program before rendering effective the consequences of their actions, allowing both oppressor and oppressed to fulfill their functions."
+    },
+    {
+      "id": "practice:ReadingQuranWithBLens",
+      "name": "Reading Quran With 'B' Lens",
+      "category": "practice",
+      "description": "Interpreting the Quran with an introspective understanding derived from the meanings of the Arabic letter 'B', focusing on the idea that all experiences result from one's own inner reality and Name-composition."
+    },
+    {
+      "id": "practice:Contemplation",
+      "name": "Contemplation (Tafakkur)",
+      "category": "practice",
+      "description": "Deep reflection on Quranic meanings, the nature of reality, Allah's Names, the System (Sunnatullah), and one's own self to attain deeper understanding and insight."
+    },
+    {
+      "id": "practice:DhikrRemembrance",
+      "name": "Dhikr (Remembrance of Allah)",
+      "category": "practice",
+      "description": "Remembering Allah and one's essential reality (the Names comprising one's being) through various means, including recitation, meditation, and awareness in daily life, to purify consciousness."
+    },
+    {
+      "id": "practice:PrayerSalat",
+      "name": "Prayer (Salat)",
+      "category": "practice",
+      "description": "An inward turn towards one's own essence (Rabb). More than just physical actions, it's an experience of connection, submission, and observation of the divine qualities within."
+    },
+    {
+      "id": "practice:SeekingRefuge",
+      "name": "Seeking Refuge in Allah (Isti'adha)",
+      "category": "practice",
+      "description": "Actively seeking protection in Allah (the forces of the Names comprising one's essence) from satanic impulses, the illusion of being only the body, and misleading thoughts."
+    },
+    {
+      "id": "practice:RepentanceTawbah",
+      "name": "Repentance (Tawbah)",
+      "category": "practice",
+      "description": "Recognizing one's misdoings (actions contrary to one's essential reality or Sunnatullah), feeling remorse, and turning back towards one's essence (Allah) with the intention to correct oneself."
+    },
+    {
+      "id": "practice:GivingAlmsZakah",
+      "name": "Giving Alms/Charity (Zakah/Sadaqah)",
+      "category": "practice",
+      "description": "Unrequitedly sharing from what Allah has provided (both material and spiritual sustenance) for the sake of Allah, to purify wealth and self, and to help those in need."
+    },
+    {
+      "id": "practice:FastingSiyam",
+      "name": "Fasting (Siyam)",
+      "category": "practice",
+      "description": "The act of reducing corporeality to its lowest level by abstaining from food, drink, and sexual activity, and turning towards one's essence to achieve greater spiritual awareness and protection."
+    },
+    {
+      "id": "practice:PatienceSabr",
+      "name": "Patience (Sabr)",
+      "category": "practice",
+      "description": "Enduring hardship, adversity, and the provocations of others by relying on the qualities of the Names in one's essence and trusting in Allah's wisdom and system (Sunnatullah)."
+    },
+    {
+      "id": "practice:GratitudeShukr",
+      "name": "Gratitude (Shukr)",
+      "category": "practice",
+      "description": "Evaluating and appreciating the blessings bestowed by Allah (the manifestations of His Names), both internal and external, and using them in accordance with His pleasure."
+    },
+    {
+      "id": "practice:ProstrationSajda",
+      "name": "Prostration (Sajda)",
+      "category": "practice",
+      "description": "A physical and spiritual act of submission, experiencing one's nothingness and helplessness in the sight of Allah's absolute reality and might."
+    },
+    {
+      "id": "practice:GlorificationTasbih",
+      "name": "Glorification (Tasbih)",
+      "category": "practice",
+      "description": "Recognizing and affirming that Allah (HU) is free from all imperfections and limitations ascribed by conditioned understanding. Experiencing one's essential reality and fulfilling its function."
+    },
+    {
+      "id": "practice:FollowingTheRasul",
+      "name": "Following the Rasul",
+      "category": "practice",
+      "description": "Adhering to the teachings, guidance, and example of the Rasul (Messenger) as the articulator of the Reality and the System (Sunnatullah)."
+    },
+    {
+      "id": "practice:ReevaluationOfForefathersBeliefs",
+      "name": "Re-evaluation of Forefathers' Beliefs",
+      "category": "practice",
+      "description": "Critically examining and questioning inherited beliefs and traditions, and not blindly following them if they contradict the Quranic message of Reality, as emphasized by the call for renewal."
+    },
+    {
+      "id": "practice:StrivingJihad",
+      "name": "Striving (Jihad)",
+      "category": "practice",
+      "description": "Struggling against one's ego (nafs), lower tendencies, and external obstacles for the cause of Allah, to live according to the Reality and protect one's faith."
+    },
+    {
+      "id": "analogy:QuranAsLens",
+      "name": "Quran As Lens",
+      "category": "analogy",
+      "description": "The Quran is likened to a lens bestowed by Allah so that one can obtain a clear and healthy vision of the two truths: the Book of the Universe and the System (Sunnatullah), to READ them correctly."
+    },
+    {
+      "id": "analogy:TwoLensesOfGlasses",
+      "name": "Two Lenses of Glasses for Vision",
+      "category": "analogy",
+      "description": "The letter 'B' comprises one lens, and the knowledge of the Absolute Self-sufficient One (al-Ahad-us-Samad) constitutes the other lens, needed to see the Reality as clear and one."
+    },
+    {
+      "id": "analogy:HolographicUniverse",
+      "name": "Holographic Universe/Reality",
+      "category": "analogy",
+      "description": "The concept that the whole is contained in the part, and each part reflects the whole. 'The part is the same as the whole!' or 'The part mirrors the whole!'"
+    },
+    {
+      "id": "analogy:ManInCar",
+      "name": "Man in a Car",
+      "category": "analogy",
+      "description": "A person born and raised in a car for 40 years, conditioned to believe 'you are this vehicle'. This illustrates how humans identify with their physical body, forgetting their true nature as pure consciousness."
+    },
+    {
+      "id": "analogy:ShadowExistence",
+      "name": "Shadow Existence",
+      "category": "analogy",
+      "description": "The things we perceive do not exist in and by themselves but are compositions of Names that manifest according to the perceiver, like shadows of a true reality."
+    },
+    {
+      "id": "analogy:WineOfParadise",
+      "name": "Wine of Paradise",
+      "category": "analogy",
+      "description": "Alludes to the experience of observing Oneness, a state beyond the perception of multiplicity. Also refers to the euphoric state caused by exposure to the reality of the Names."
+    },
+    {
+      "id": "analogy:TriggerSystemEqualizer",
+      "name": "Trigger System as Equalizer",
+      "category": "analogy",
+      "description": "The manifestation of Names is like channels in an equalizer; some attributes gain precedence over others depending on the desired manifestation, and certain Names automatically trigger others."
+    },
+    {
+      "id": "analogy:SkyAsConsciousness",
+      "name": "Sky as Consciousness/Intellect",
+      "category": "analogy",
+      "description": "The Arabic word 'sama' (sky/heaven) is often used metaphorically to refer to states of consciousness, intellectual activity, or the unperceivable dimensions beyond matter."
+    },
+    {
+      "id": "analogy:EarthAsBody",
+      "name": "Earth as Body",
+      "category": "analogy",
+      "description": "The Arabic word 'ardh' (earth) is generally used metaphorically to refer to the human body or the material dimension."
+    },
+    {
+      "id": "analogy:MountainAsEgoOrOrgans",
+      "name": "Mountain as Ego or Organs",
+      "category": "analogy",
+      "description": "The word 'mountain' is commonly employed to imply the 'ego', the 'I' or 'I-ness'. When 'earth' refers to the body, 'mountain' can denote the organs."
+    },
+    {
+      "id": "analogy:SeedAndPlant",
+      "name": "Ba'th (Resurrection) as Seed and Plant",
+      "category": "analogy",
+      "description": "Resurrection (ba'th) is like the germination of a seed to sprout its plant; life emerges from death (dormant potential). The previous state is like a 'grave'."
+    },
+    {
+      "id": "analogy:LanternLampGlass",
+      "name": "Lantern, Lamp, and Glass (Nur verse)",
+      "category": "analogy",
+      "description": "In Surah An-Nur, the brain is likened to a lantern, individual consciousness to a lamp within it, and universal consciousness to the glass containing the lamp, all illuminated by the Nur of Allah."
+    },
+    {
+      "id": "analogy:RopeOfAllah",
+      "name": "Rope of Allah (Hablullah)",
+      "category": "analogy",
+      "description": "Holding fast onto the 'rope of Allah' signifies adhering to the reality of the Names in one's being, maintaining unity and not falling into separation."
+    },
+    {
+      "id": "analogy:NightAndDayAlternation",
+      "name": "Alternation of Night and Day",
+      "category": "analogy",
+      "description": "Symbolizes the contrast or transformation between the darkness of ignorance/corporeality and the light of knowledge/reality; or the alternation between intrinsic and extrinsic observation."
+    },
+    {
+      "id": "analogy:ShipsSailingSea",
+      "name": "Ships Sailing the Sea",
+      "category": "analogy",
+      "description": "Individualized consciousness (or the brain/body as a vehicle for consciousness) navigating the vast ocean of divine knowledge or the experiences of life."
+    },
+    {
+      "id": "analogy:WaterAsKnowledge",
+      "name": "Water as Knowledge/Grace",
+      "category": "analogy",
+      "description": "Water disclosed from the sky is a metaphor for knowledge or grace revealed from higher dimensions of consciousness, giving life to a 'dead' earth (unaware body/consciousness)."
+    },
+    {
+      "id": "analogy:ConstellationsInSkyBrain",
+      "name": "Constellations in the Sky (Brain)",
+      "category": "analogy",
+      "description": "The 'sky' (brain/consciousness) is adorned with constellations (specific regions or capacities like the pineal gland) that enable the observation of reality."
+    },
+    {
+      "id": "analogy:TreeOfImmortality",
+      "name": "Tree of Immortality / Forbidden Tree",
+      "category": "analogy",
+      "description": "The forbidden tree in the story of Adam symbolizes the allure of bodily life, corporeality, and the restriction of consciousness by material desires, leading to forgetfulness of one's eternal essence."
+    },
+    {
+      "id": "analogy:FountOfCopper",
+      "name": "Fount of Molten Copper",
+      "category": "analogy",
+      "description": "A special knowledge, power, or resource given to Solomon, possibly related to commanding unseen forces or understanding subtle energies."
+    },
+    {
+      "id": "analogy:HoopoeAndAntsLanguage",
+      "name": "Solomon Understanding Language of Hoopoe and Ants",
+      "category": "analogy",
+      "description": "Illustrates Solomon's bestowed ability to communicate with or understand the 'language' or states of other creatures/beings, signifying deep insight into creation."
+    },
+    {
+      "id": "analogy:SunAndMoonMeasure",
+      "name": "Sun and Moon by Measure",
+      "category": "analogy",
+      "description": "The Sun representing comprehension/intellect and the Moon representing emotion/feeling, both functioning in measured levels or stations within the human experience."
+    },
+    {
+      "id": "analogy:StarAndTreeProstration",
+      "name": "Star (Ideas) and Tree (Body) in Prostration",
+      "category": "analogy",
+      "description": "Symbolizes that both ideas (Najm - star) and the physical body (Shajar - tree) are in a natural state of submission and servitude to Allah's system."
+    },
+    {
+      "id": "analogy:ZaqqumTreeAsBody",
+      "name": "Tree of Zaqqum as the Body",
+      "category": "analogy",
+      "description": "The Tree of Zaqqum, described as food for the people of Hell, is interpreted as the physical body and the suffering that results from identifying solely with it."
+    },
+    {
+      "id": "analogy:FemaleSpiderHome",
+      "name": "Female Spider's Home",
+      "category": "analogy",
+      "description": "Illustrates the weakness and fragility of taking friends, protectors, or deities besides Allah; their support is as flimsy as a spider's web."
+    },
+    {
+      "id": "analogy:PenQalam",
+      "name": "The Pen (Al-Qalam)",
+      "category": "analogy",
+      "description": "Symbolizes the divine power of disclosing knowledge and creating/programming manifestation. It is by the Pen that all things are inscribed and detailed in the system of existence."
+    },
+    {
+      "id": "analogy:AlQariaMothsAndWool",
+      "name": "Al-Qari'a: People like Moths, Mountains like Wool",
+      "category": "analogy",
+      "description": "On the Day of Calamity (Al-Qari'a - Doomsday), people will be scattered and disoriented like moths, and the mountains (egos, firmly established beliefs) will become flimsy and dispersed like carded wool."
+    }
+  ],
+  "edges": [
+    {
+      "source": "concept:SufiInterpretation",
+      "target": "concept:Quran",
+      "label": "INTERPRETS"
+    },
+    {
+      "source": "concept:SufiInterpretation",
+      "target": "concept:NonDuality",
+      "label": "EMPHASIZES"
+    },
+    {
+      "source": "concept:AhmedHulusi",
+      "target": "concept:SufiInterpretation",
+      "label": "PRESENTS"
+    },
+    {
+      "source": "concept:Quran",
+      "target": "concept:KnowledgeOfTheReality",
+      "label": "CONTAINS"
+    },
+    {
+      "source": "concept:Quran",
+      "target": "concept:Sunnatullah",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "concept:KnowledgeOfAllah",
+      "target": "concept:Allah",
+      "label": "IS_ABOUT"
+    },
+    {
+      "source": "concept:KnowledgeOfAllah",
+      "target": "concept:AlAsmaUlHusna",
+      "label": "INVOLVES_UNDERSTANDING"
+    },
+    {
+      "source": "concept:AlAsmaUlHusna",
+      "target": "concept:Allah",
+      "label": "ARE_QUALITIES_OF"
+    },
+    {
+      "source": "concept:AlAsmaUlHusna",
+      "target": "concept:TriggerSystem",
+      "label": "OPERATE_VIA"
+    },
+    {
+      "source": "concept:NonDuality",
+      "target": "concept:Allah",
+      "label": "IS_REALITY_OF"
+    },
+    {
+      "source": "concept:DualityShirq",
+      "target": "concept:NonDuality",
+      "label": "IS_OPPOSITE_OF"
+    },
+    {
+      "source": "concept:DualityShirq",
+      "target": "concept:EgoNafs",
+      "label": "STEMS_FROM"
+    },
+    {
+      "source": "concept:LetterB",
+      "target": "concept:SufiInterpretation",
+      "label": "IS_KEY_TO"
+    },
+    {
+      "source": "concept:LetterB",
+      "target": "concept:Basmalah",
+      "label": "IS_FIRST_LETTER_OF"
+    },
+    {
+      "source": "concept:LetterB",
+      "target": "practice:ReadingQuranWithBLens",
+      "label": "IS_FOCUS_OF"
+    },
+    {
+      "source": "concept:ThePointBeneathTheB",
+      "target": "concept:LetterB",
+      "label": "RELATED_TO"
+    },
+    {
+      "source": "concept:ThePointBeneathTheB",
+      "target": "concept:HolographicReality",
+      "label": "SYMBOLIZES"
+    },
+    {
+      "source": "concept:HolographicReality",
+      "target": "concept:NonDuality",
+      "label": "SUPPORTS"
+    },
+    {
+      "source": "analogy:HolographicUniverse",
+      "target": "concept:HolographicReality",
+      "label": "ILLUSTRATES"
+    },
+    {
+      "source": "concept:Sunnatullah",
+      "target": "concept:Allah",
+      "label": "IS_SYSTEM_OF"
+    },
+    {
+      "source": "concept:Rabb",
+      "target": "concept:AlAsmaUlHusna",
+      "label": "IS_COMPOSITION_OF"
+    },
+    {
+      "source": "concept:Rasul",
+      "target": "concept:KnowledgeOfAllah",
+      "label": "DISSEMINATES"
+    },
+    {
+      "source": "concept:Rasul",
+      "target": "concept:RevelationIrsal",
+      "label": "RECEIVES_VIA"
+    },
+    {
+      "source": "concept:Self",
+      "target": "concept:UniversalConsciousness",
+      "label": "IS"
+    },
+    {
+      "source": "concept:IndividualConsciousness",
+      "target": "concept:EgoNafs",
+      "label": "IS_FORMED_BY"
+    },
+    {
+      "source": "concept:VicegerentKhalifa",
+      "target": "concept:AlAsmaUlHusna",
+      "label": "MANIFESTS"
+    },
+    {
+      "source": "concept:ParadiseJannah",
+      "target": "concept:AngelsMalaika",
+      "label": "FOR_THOSE_WITH_QUALITIES_OF"
+    },
+    {
+      "source": "concept:ParadiseJannah",
+      "target": "concept:FaithIman",
+      "label": "IS_REWARD_FOR"
+    },
+    {
+      "source": "concept:HellJahannam",
+      "target": "concept:EgoNafs",
+      "label": "RESULTS_FROM_BEING_DRIVEN_BY"
+    },
+    {
+      "source": "concept:DoomsdayQiyamah",
+      "target": "concept:IndividualConsciousness",
+      "label": "IS_EXPERIENCE_OF"
+    },
+    {
+      "source": "concept:AfterlifeAkhira",
+      "target": "concept:ResurrectionBath",
+      "label": "BEGINS_WITH"
+    },
+    {
+      "source": "concept:AngelsMalaika",
+      "target": "concept:AlAsmaUlHusna",
+      "label": "ARE_POTENTIALS_OF"
+    },
+    {
+      "source": "concept:SatanIblis",
+      "target": "concept:EgoNafs",
+      "label": "IS_FORCE_OF"
+    },
+    {
+      "source": "concept:SatanIblis",
+      "target": "analogy:ManInCar",
+      "label": "DECEIVES_LIKE_IN"
+    },
+    {
+      "source": "concept:FaithIman",
+      "target": "concept:Allah",
+      "label": "IS_BELIEF_IN"
+    },
+    {
+      "source": "concept:Taqwa",
+      "target": "concept:Sunnatullah",
+      "label": "IS_PROTECTION_FROM_CONSEQUENCES_OF"
+    },
+    {
+      "source": "concept:Dhikr",
+      "target": "concept:Self",
+      "label": "IS_REMEMBRANCE_OF"
+    },
+    {
+      "source": "concept:Hamd",
+      "target": "concept:Allah",
+      "label": "BELONGS_TO"
+    },
+    {
+      "source": "concept:Tasbih",
+      "target": "concept:Allah",
+      "label": "IS_GLORIFICATION_OF"
+    },
+    {
+      "source": "concept:HU",
+      "target": "concept:Allah",
+      "label": "IS_ABSOLUTE_ESSENCE_OF"
+    },
+    {
+      "source": "concept:ArRahman",
+      "target": "concept:AlAsmaUlHusna",
+      "label": "IS_ONE_OF"
+    },
+    {
+      "source": "concept:ArRahim",
+      "target": "concept:AlAsmaUlHusna",
+      "label": "IS_ONE_OF"
+    },
+    {
+      "source": "concept:Islam",
+      "target": "concept:Allah",
+      "label": "IS_SUBMISSION_TO"
+    },
+    {
+      "source": "practice:ReadingQuranWithBLens",
+      "target": "concept:LetterB",
+      "label": "USES_LENS_OF"
+    },
+    {
+      "source": "practice:ReadingQuranWithBLens",
+      "target": "concept:Quran",
+      "label": "IS_METHOD_FOR"
+    },
+    {
+      "source": "practice:Contemplation",
+      "target": "concept:KnowledgeOfTheReality",
+      "label": "DEEPENS"
+    },
+    {
+      "source": "practice:DhikrRemembrance",
+      "target": "concept:Allah",
+      "label": "IS_OF"
+    },
+    {
+      "source": "practice:PrayerSalat",
+      "target": "concept:Rabb",
+      "label": "IS_TURN_TO"
+    },
+    {
+      "source": "practice:SeekingRefuge",
+      "target": "concept:Allah",
+      "label": "IS_IN"
+    },
+    {
+      "source": "practice:SeekingRefuge",
+      "target": "concept:SatanIblis",
+      "label": "IS_FROM"
+    },
+    {
+      "source": "analogy:QuranAsLens",
+      "target": "concept:Sunnatullah",
+      "label": "HELPS_SEE"
+    },
+    {
+      "source": "analogy:QuranAsLens",
+      "target": "concept:Quran",
+      "label": "DESCRIBES"
+    },
+    {
+      "source": "analogy:TwoLensesOfGlasses",
+      "target": "concept:LetterB",
+      "label": "USES"
+    },
+    {
+      "source": "analogy:TwoLensesOfGlasses",
+      "target": "concept:AbsoluteSelfSufficientOne",
+      "label": "USES"
+    },
+    {
+      "source": "analogy:ManInCar",
+      "target": "concept:EgoNafs",
+      "label": "ILLUSTRATES_PROBLEM_OF"
+    },
+    {
+      "source": "analogy:ManInCar",
+      "target": "concept:Self",
+      "label": "CONTRASTS_WITH_FORGETTING"
+    },
+    {
+      "source": "seg:TranslatorsNote",
+      "target": "concept:LetterB",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:TranslatorsNote",
+      "target": "concept:HolographicReality",
+      "label": "INTRODUCES"
+    },
+    {
+      "source": "seg:TranslatorsNote",
+      "target": "concept:AhmedHulusi",
+      "label": "DESCRIBES_APPROACH_OF"
+    },
+    {
+      "source": "seg:IntroInfoToUnderstandingQuran_P1-8",
+      "target": "concept:Quran",
+      "label": "INTRODUCES_INTERPRETATION_OF"
+    },
+    {
+      "source": "seg:IntroInfoToUnderstandingQuran_P1-8",
+      "target": "concept:NonDuality",
+      "label": "EMPHASIZES"
+    },
+    {
+      "source": "seg:IntroInfoToUnderstandingQuran_P1-8",
+      "target": "analogy:QuranAsLens",
+      "label": "USES"
+    },
+    {
+      "source": "seg:ImportantNoteAboutUnderstandingDTQ_P9-10",
+      "target": "concept:Quran",
+      "label": "CLARIFIES_NATURE_OF"
+    },
+    {
+      "source": "seg:DecodingTheQuran_P11-21",
+      "target": "concept:Self",
+      "label": "EXPLAINS_PURPOSE_OF_QURAN_FOR"
+    },
+    {
+      "source": "seg:DecodingTheQuran_P11-21",
+      "target": "analogy:ManInCar",
+      "label": "USES"
+    },
+    {
+      "source": "seg:AnEssentialMessage_P23-24",
+      "target": "concept:MalaIAla",
+      "label": "MENTIONS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlAsmaUlHusna",
+      "label": "DETAILS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:TriggerSystem",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:HU",
+      "label": "DEFINES_AS_ESSENCE_OF"
+    },
+    {
+      "source": "seg:AlFatiha_CH1_P49-50",
+      "target": "concept:AlFatiha",
+      "label": "INTERPRETS"
+    },
+    {
+      "source": "seg:AlFatiha_CH1_P49-50",
+      "target": "concept:Rabb",
+      "label": "REFERENCES"
+    },
+    {
+      "source": "concept:AlMutakabbir",
+      "name": "Al-Mutakabbir (The Supreme/Proud)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One to whom the word 'I' exclusively belongs. Absolute 'I'ness belongs only to Him. Majesty is His attribute alone."
+    },
+    {
+      "source": "seg:AlBaqarah_CH2_P51-88",
+      "target": "concept:SatanIblis",
+      "label": "NARRATES_FALL_OF_ADAM_AND"
+    },
+    {
+      "source": "seg:AlBaqarah_CH2_P51-88",
+      "target": "concept:FaithIman",
+      "label": "DISCUSSES_NATURE_OF"
+    },
+    {
+      "source": "seg:AliImran_CH3_P89-111",
+      "target": "concept:RevelationIrsal",
+      "label": "MENTIONS_TO_MARY_AND_JESUS"
+    },
+    {
+      "source": "seg:AnNisa_CH4_P112-131",
+      "target": "practice:GivingAlmsZakah",
+      "label": "MENTIONS_RULES_REGARDING"
+    },
+    {
+      "source": "seg:AlMaidah_CH5_P132-146",
+      "target": "practice:FastingSiyam",
+      "label": "IMPLIES_THROUGH_LAWFUL_FOODS"
+    },
+    {
+      "source": "seg:AlAnam_CH6_P147-164",
+      "target": "concept:Abraham",
+      "label": "RECOUNTS_STORY_OF"
+    },
+    {
+      "source": "seg:AlAraf_CH7_P165-186",
+      "target": "concept:Moses",
+      "label": "RECOUNTS_STORY_OF"
+    },
+    {
+      "source": "seg:Yusuf_CH12_P235-245",
+      "target": "concept:Joseph",
+      "label": "NARRATES_STORY_OF"
+    },
+    {
+      "source": "seg:AlIsra_CH17_P278-288",
+      "target": "concept:NightJourney",
+      "label": "DESCRIBES"
+    },
+    {
+      "source": "seg:AlKahf_CH18_P289-299",
+      "target": "concept:DhulQarnayn",
+      "label": "NARRATES_STORY_OF"
+    },
+    {
+      "source": "seg:AlKahf_CH18_P289-299",
+      "target": "concept:Khidr",
+      "label": "NARRATES_ENCOUNTER_WITH_MOSES_AND"
+    },
+    {
+      "source": "seg:AnNur_CH24_P347-354",
+      "target": "analogy:LanternLampGlass",
+      "label": "CONTAINS"
+    },
+    {
+      "source": "concept:Abraham",
+      "target": "concept:FaithIman",
+      "label": "IS_EXAMPLE_OF"
+    },
+    {
+      "source": "concept:Moses",
+      "target": "concept:RevelationIrsal",
+      "label": "RECEIVED"
+    },
+    {
+      "source": "concept:Jesus",
+      "target": "concept:RevelationIrsal",
+      "label": "RECEIVED"
+    },
+    {
+      "source": "concept:Muhammad",
+      "target": "concept:RevelationIrsal",
+      "label": "RECEIVED"
+    },
+    {
+      "source": "concept:KnowledgeOfTheReality",
+      "target": "concept:Sunnatullah",
+      "label": "INCLUDES"
+    },
+    {
+      "source": "practice:DhikrRemembrance",
+      "target": "concept:AlAsmaUlHusna",
+      "label": "CAN_BE_OF"
+    },
+    {
+      "source": "concept:AlGhani",
+      "name": "Al-Ghani (The Self-Sufficient)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who is beyond being labeled and limited by the manifestations of His Names, as He is Great (Akbar). Infinitely abundant with His Names."
+    },
+    {
+      "source": "concept:AlMughni",
+      "name": "Al-Mughni (The Enricher)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who enriches individuals and raises them above others in wealth and emancipates them. Grants the beauty of infinity (baqa) from nothingness (fakr)."
+    },
+    {
+      "source": "concept:AlMani",
+      "name": "Al-Mani (The Preventer)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who prevents those from attaining things they do not deserve."
+    },
+    {
+      "source": "concept:AdDarr",
+      "name": "Ad-Darr (The Distresser)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who afflicts individuals with various distressing situations (sickness, suffering, trouble) in order to make them turn to Himself."
+    },
+    {
+      "source": "concept:AnNafi",
+      "name": "An-Nafi (The Propitious/Benefiter)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who prompts individuals to engage in good thoughts and actions to aid them towards beneficent and auspicious outcomes."
+    },
+    {
+      "source": "concept:AnNur",
+      "name": "An-Nur (The Light)",
+      "category": "concept",
+      "description": "One of Allah's Names. The Knowledge that is the source and essence of everything. The essence of everything is Nur (light/knowledge). Life subsists with knowledge."
+    },
+    {
+      "source": "concept:AlHadi",
+      "name": "Al-Hadi (The Guide)",
+      "category": "concept",
+      "description": "One of Allah's Names. The guide to the truth. The One who allows individuals to live according to their reality. The articulator of the truth."
+    },
+    {
+      "source": "concept:AlBadee",
+      "name": "Al-Badee (The Incomparable Originator)",
+      "category": "concept",
+      "description": "One of Allah's Names. The incomparable beauty and the originator of beautiful manifestation! The One who originates innumerable manifestations, all with unique and exclusive qualities, and without any example, pattern, specimen etc."
+    },
+    {
+      "source": "concept:AlBaqi",
+      "name": "Al-Baqi (The Everlasting)",
+      "category": "concept",
+      "description": "One of Allah's Names. The Everlasting. The One who exists beyond the concept of time."
+    },
+    {
+      "source": "concept:AlWarith",
+      "name": "Al-Warith (The Inheritor)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who manifests under various names and forms in order to inherit and protect the possessions of those who abandon all their belongings to undergo true transformation."
+    },
+    {
+      "source": "concept:ArRashid",
+      "name": "Ar-Rashid (The Guide to Right Path)",
+      "category": "concept",
+      "description": "One of Allah's Names. The guider to the right path. The One who allows individuals, who recognize their essential reality, to experience the maturity of this recognition."
+    },
+    {
+      "source": "concept:AsSabur",
+      "name": "As-Sabur (The Patient)",
+      "category": "concept",
+      "description": "One of Allah's Names. The One who waits for each individual to execute his creation program before rendering effective the consequences of their actions, allowing both oppressor and oppressed to fulfill their functions."
+    },
+    {
+      "source": "concept:SufiInterpretation",
+      "target": "concept:Quran",
+      "label": "INTERPRETS"
+    },
+    {
+      "source": "concept:SufiInterpretation",
+      "target": "concept:NonDuality",
+      "label": "EMPHASIZES"
+    },
+    {
+      "source": "concept:SufiInterpretation",
+      "target": "concept:LetterB",
+      "label": "UTILIZES_KEY_OF"
+    },
+    {
+      "source": "concept:SufiInterpretation",
+      "target": "practice:Contemplation",
+      "label": "PROMOTES"
+    },
+    {
+      "source": "concept:SufiInterpretation",
+      "target": "concept:AhmedHulusi",
+      "label": "IS_PRESENTED_BY"
+    },
+    {
+      "source": "concept:Quran",
+      "target": "concept:KnowledgeOfTheReality",
+      "label": "IS_SOURCE_OF"
+    },
+    {
+      "source": "concept:Quran",
+      "target": "concept:Sunnatullah",
+      "label": "CONTAINS_KNOWLEDGE_OF"
+    },
+    {
+      "source": "concept:Quran",
+      "target": "practice:ReadingQuranWithBLens",
+      "label": "IS_SUBJECT_OF"
+    },
+    {
+      "source": "concept:Allah",
+      "target": "concept:AlAsmaUlHusna",
+      "label": "MANIFESTS_THROUGH"
+    },
+    {
+      "source": "concept:Allah",
+      "target": "concept:HU",
+      "label": "IS_ESSENTIALLY"
+    },
+    {
+      "source": "concept:Allah",
+      "target": "concept:Rabb",
+      "label": "IS_ULTIMATE"
+    },
+    {
+      "source": "concept:KnowledgeOfAllah",
+      "target": "concept:DualityShirq",
+      "label": "NEGATES_NEED_FOR_EXTERNAL_DEITY_IN"
+    },
+    {
+      "source": "concept:AlAsmaUlHusna",
+      "target": "concept:ShadowExistence",
+      "label": "FORMS_BASIS_OF"
+    },
+    {
+      "source": "concept:AlAsmaUlHusna",
+      "target": "concept:VicegerentKhalifa",
+      "label": "ARE_MANIFESTED_BY"
+    },
+    {
+      "source": "concept:AlAsmaUlHusna",
+      "target": "concept:ParadiseJannah",
+      "label": "QUALITIES_EXPERIENCED_IN"
+    },
+    {
+      "source": "concept:NonDuality",
+      "target": "concept:HolographicReality",
+      "label": "IS_SUPPORTED_BY"
+    },
+    {
+      "source": "concept:NonDuality",
+      "target": "concept:Islam",
+      "label": "IS_CORE_OF_TRUE"
+    },
+    {
+      "source": "concept:DualityShirq",
+      "target": "concept:SatanIblis",
+      "label": "IS_PROMOTED_BY"
+    },
+    {
+      "source": "concept:DualityShirq",
+      "target": "concept:EgoNafs",
+      "label": "IS_NOURISHED_BY"
+    },
+    {
+      "source": "concept:LetterB",
+      "target": "concept:ThePointBeneathTheB",
+      "label": "CONTAINS_MYSTERY_OF"
+    },
+    {
+      "source": "concept:LetterB",
+      "target": "concept:Basmalah",
+      "label": "IS_SIGNIFICANT_IN"
+    },
+    {
+      "source": "concept:HolographicReality",
+      "target": "analogy:HolographicUniverse",
+      "label": "IS_EXEMPLIFIED_BY"
+    },
+    {
+      "source": "concept:Sunnatullah",
+      "target": "concept:TriggerSystem",
+      "label": "INCLUDES"
+    },
+    {
+      "source": "concept:Sunnatullah",
+      "target": "concept:DoomsdayQiyamah",
+      "label": "GOVERNS_CONSEQUENCES_OF"
+    },
+    {
+      "source": "concept:Rabb",
+      "target": "concept:Self",
+      "label": "IS_REALITY_OF_ONES"
+    },
+    {
+      "source": "concept:Rasul",
+      "target": "concept:RevelationIrsal",
+      "label": "TRANSMITS"
+    },
+    {
+      "source": "concept:Rasul",
+      "target": "practice:FollowingTheRasul",
+      "label": "IS_SUBJECT_OF"
+    },
+    {
+      "source": "concept:RevelationIrsal",
+      "target": "concept:Quran",
+      "label": "IS_METHOD_OF_QURANIC"
+    },
+    {
+      "source": "concept:Self",
+      "target": "practice:DhikrRemembrance",
+      "label": "IS_OBJECT_OF"
+    },
+    {
+      "source": "concept:IndividualConsciousness",
+      "target": "concept:UniversalConsciousness",
+      "label": "IS_LIMITED_FORM_OF"
+    },
+    {
+      "source": "concept:EgoNafs",
+      "target": "analogy:ManInCar",
+      "label": "IS_LIKE_DRIVER_MISTAKING_CAR_FOR_SELF_IN"
+    },
+    {
+      "source": "concept:EgoNafs",
+      "target": "practice:StrivingJihad",
+      "label": "IS_OBJECT_OF"
+    },
+    {
+      "source": "concept:VicegerentKhalifa",
+      "target": "concept:AngelsMalaika",
+      "label": "CAN_MANIFEST_QUALITIES_OF"
+    },
+    {
+      "source": "concept:ParadiseJannah",
+      "target": "seg:ArRahman_CH55_P538-543",
+      "label": "IS_DESCRIBED_IN"
+    },
+    {
+      "source": "concept:ParadiseJannah",
+      "target": "analogy:WineOfParadise",
+      "label": "OFFERS"
+    },
+    {
+      "source": "concept:HellJahannam",
+      "target": "seg:AlMuddathir_CH74_P599-602",
+      "label": "IS_DESCRIBED_IN_SAQAR"
+    },
+    {
+      "source": "concept:DoomsdayQiyamah",
+      "target": "seg:AlQiyama_CH75_P603-605",
+      "label": "IS_DETAILED_IN"
+    },
+    {
+      "source": "concept:AfterlifeAkhira",
+      "target": "concept:FaithIman",
+      "label": "IS_BELIEF_IN"
+    },
+    {
+      "source": "concept:ResurrectionBath",
+      "target": "analogy:SeedAndPlant",
+      "label": "IS_LIKE"
+    },
+    {
+      "source": "concept:AngelsMalaika",
+      "target": "concept:MalaIAla",
+      "label": "FORM_PART_OF"
+    },
+    {
+      "source": "concept:Jinn",
+      "target": "seg:AlJinn_CH72_P593-595",
+      "label": "ARE_DISCUSSED_IN"
+    },
+    {
+      "source": "concept:Taqwa",
+      "target": "practice:PrayerSalat",
+      "label": "IS_CULTIVATED_BY"
+    },
+    {
+      "source": "concept:Dhikr",
+      "target": "practice:DhikrRemembrance",
+      "label": "IS_ACT_OF"
+    },
+    {
+      "source": "concept:Hamd",
+      "target": "practice:GratitudeShukr",
+      "label": "IS_EXPRESSION_OF"
+    },
+    {
+      "source": "concept:Tasbih",
+      "target": "practice:GlorificationTasbih",
+      "label": "IS_ACT_OF"
+    },
+    {
+      "source": "concept:HU",
+      "target": "concept:Uluhiyyah",
+      "label": "IS_ASPECT_OF"
+    },
+    {
+      "source": "concept:ArRahman",
+      "target": "seg:ArRahman_CH55_P538-543",
+      "label": "IS_FOCUS_OF"
+    },
+    {
+      "source": "concept:ArRahim",
+      "target": "concept:Grace",
+      "label": "IS_SOURCE_OF"
+    },
+    {
+      "source": "concept:AlMaleek",
+      "target": "concept:Sovereignty",
+      "label": "REFERS_TO_ALLAHS"
+    },
+    {
+      "source": "concept:AlQuddus",
+      "target": "concept:Tanzih",
+      "label": "RELATES_TO"
+    },
+    {
+      "source": "concept:AsSalam",
+      "target": "concept:Peace",
+      "label": "IS_SOURCE_OF"
+    },
+    {
+      "source": "concept:AlMuminNames",
+      "target": "concept:FaithIman",
+      "label": "ENABLES"
+    },
+    {
+      "source": "concept:AlMuhaymin",
+      "target": "concept:TrustAmanah",
+      "label": "RELATES_TO"
+    },
+    {
+      "source": "concept:AlAziz",
+      "target": "concept:Power",
+      "label": "REFLECTS_ALLAHS"
+    },
+    {
+      "source": "concept:AlJabbar",
+      "target": "concept:WillOfAllah",
+      "label": "REFLECTS_COMPELLING"
+    },
+    {
+      "source": "concept:AbsoluteSelfSufficientOne",
+      "target": "seg:AlIkhlas_CH112_P667",
+      "label": "IS_EXPLAINED_IN"
+    },
+    {
+      "source": "concept:KnowledgeOfTheReality",
+      "target": "practice:Contemplation",
+      "label": "IS_GAINED_THROUGH"
+    },
+    {
+      "source": "concept:SufismTasawwuf",
+      "target": "concept:AhmedHulusi",
+      "label": "IS_PERSPECTIVE_OF"
+    },
+    {
+      "source": "practice:ReadingQuranWithBLens",
+      "target": "seg:IntroInfoToUnderstandingQuran_P1-8",
+      "label": "IS_ADVOCATED_IN"
+    },
+    {
+      "source": "analogy:QuranAsLens",
+      "target": "seg:IntroInfoToUnderstandingQuran_P1-8",
+      "label": "IS_MENTIONED_IN"
+    },
+    {
+      "source": "seg:Contents",
+      "target": "concept:Quran",
+      "label": "LISTS_STRUCTURE_OF_INTERPRETATION_OF"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlKhaliq",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlBari",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMusawwir",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlGhaffar",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlQahhar",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlWahhab",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:ArRazzaq",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlFattah",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlAleem",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlQabid",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlBasit",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlKhafid",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:ArRafi",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMuizz",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMudhill",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AsSami",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlBasir",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlHakam",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlAdl",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlLatif",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlHabir",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlHalim",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlAzim",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlGhafur",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AshShakur",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlAliy",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlKabir",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlHafiz",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMuqeet",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlHasib",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlJalil",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlKarim",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:ArRaqib",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMujib",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlWasi",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlHakim",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlWadud",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMajeedNames",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlBaith",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AshShahid",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlHaqq",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlWakil",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlQawwi",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMatin",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlWaliyy",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlHamid",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMuhsi",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMubdi",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMuid",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMuhyi",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMumit",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlHayy",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlQayyum",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlWajid",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMajidNames",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlWahid",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AsSamad",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlQadir",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMuqtadir",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMuqaddim",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMuakhkhir",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlAwwal",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlAkhir",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AzZahir",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlBatin",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlWali",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMutaali",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlBarr",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AtTawwab",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMuntaqim",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlAfuw",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:ArRauf",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:MaalikulMulk",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:DhulJalaliWalIkram",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMuqsit",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlJami",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlGhani",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMughni",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlMani",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AdDarr",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AnNafi",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AnNur",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlHadi",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlBadee",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlBaqi",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AlWarith",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:ArRashid",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlAsmaUlHusna_P25-48",
+      "target": "concept:AsSabur",
+      "label": "EXPLAINS"
+    },
+    {
+      "source": "seg:AlBaqarah_CH2_P51-88",
+      "target": "concept:Adam",
+      "label": "RECOUNTS_STORY_OF"
+    },
+    {
+      "source": "seg:AlBaqarah_CH2_P51-88",
+      "target": "concept:ChildrenOfIsrael",
+      "label": "RECOUNTS_STORIES_OF"
+    },
+    {
+      "source": "concept:AlMutakabbir",
+      "target": "concept:AlAsmaUlHusna",
+      "label": "IS_ONE_OF"
+    },
+    {
+      "source": "concept:Adam",
+      "target": "concept:VicegerentKhalifa",
+      "label": "IS_FIRST"
+    },
+    {
+      "source": "concept:ChildrenOfIsrael",
+      "target": "concept:Moses",
+      "label": "ARE_PEOPLE_OF"
+    },
+    {
+      "source": "concept:Joseph",
+      "target": "practice:PatienceSabr",
+      "label": "EXEMPLIFIES"
+    },
+    {
+      "source": "concept:NightJourney",
+      "target": "concept:Rasul",
+      "label": "IS_EXPERIENCE_OF"
+    },
+    {
+      "source": "concept:DhulQarnayn",
+      "target": "seg:AlKahf_CH18_P289-299",
+      "label": "IS_MENTIONED_IN"
+    },
+    {
+      "source": "concept:Khidr",
+      "target": "seg:AlKahf_CH18_P289-299",
+      "label": "IS_MENTIONED_IN"
+    },
+    {
+      "source": "concept:Grace",
+      "target": "concept:Allah",
+      "label": "IS_FROM"
+    },
+    {
+      "source": "concept:Sovereignty",
+      "target": "concept:Allah",
+      "label": "BELONGS_TO"
+    },
+    {
+      "source": "concept:Tanzih",
+      "target": "concept:Allah",
+      "label": "AFFIRMS_INCOMPARABILITY_OF"
+    },
+    {
+      "source": "concept:Peace",
+      "target": "concept:AsSalam",
+      "label": "IS_MANIFESTATION_OF"
+    },
+    {
+      "source": "concept:TrustAmanah",
+      "target": "concept:VicegerentKhalifa",
+      "label": "IS_RELATED_TO_RESPONSIBILITY_OF"
+    },
+    {
+      "source": "concept:Power",
+      "target": "concept:AlQadir",
+      "label": "IS_ATTRIBUTE_OF"
+    },
+    {
+      "source": "concept:WillOfAllah",
+      "target": "concept:Sunnatullah",
+      "label": "IS_EXPRESSED_THROUGH"
+    },
+    {
+      "source": "concept:System",
+      "target": "concept:Sunnatullah",
+      "label": "IS_SYNONYMOUS_WITH"
+    }
+  ]
+}

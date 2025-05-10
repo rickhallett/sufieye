@@ -1,10 +1,6 @@
 {
-  "builds": [
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    }
-  ],
+  "buildCommand": "bun run build",
+  "outputDirectory": "dist",
   "routes": [
     {
       "src": "/(.*)",
