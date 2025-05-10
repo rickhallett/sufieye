@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const zoomOutBtn = document.getElementById('zoomOutBtn');
   const fitBtn = document.getElementById('fitBtn');
 
+  // Fixed zoom controls (always visible)
+  const fixedZoomInBtn = document.getElementById('fixedZoomInBtn');
+  const fixedZoomOutBtn = document.getElementById('fixedZoomOutBtn');
+  const fixedFitBtn = document.getElementById('fixedFitBtn');
+
   // Info Panel Elements
   const nodeIdDisplay = document.getElementById('node-id-display');
   const nodeNameDisplay = document.getElementById('node-name-display');
@@ -45,10 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
   let nodesDataSet = new vis.DataSet(); // Vis.js DataSet for nodes
   let edgesDataSet = new vis.DataSet(); // Vis.js DataSet for edges
   let isMobileDevice = window.innerWidth <= 768; // Check if we're on a mobile device
-  let touchStarted = null; // For tracking touch interactions
-  let containmentInterval = null; // For periodic containment checks
   let isStabilized = false; // Track if the network is stabilized
-  let lastContainmentCheck = 0; // Throttle containment checks
+  let isUserInteracting = false; // Track if user is currently interacting with the graph
+  let interactionTimeout = null; // For tracking interaction state
 
   // --- Color Settings ---
   const colors = {
@@ -140,22 +144,16 @@ document.addEventListener('DOMContentLoaded', function () {
       edges: edgesDataSet
     };
 
-    // Clear any existing containment interval
-    if (containmentInterval) {
-      clearInterval(containmentInterval);
-    }
-
     // Calculate container dimensions
     const containerRect = graphContainer.getBoundingClientRect();
     const containerWidth = containerRect.width;
     const containerHeight = containerRect.height;
 
-    // Create more constrained graph layout for better containment
+    // Create more natural graph layout for better user experience
     const options = {
       layout: {
-        improvedLayout: true,
+        improvedLayout: false, // Disable improvedLayout as it's causing issues
         randomSeed: 42, // Consistent layout
-        clusterThreshold: 150,
       },
       edges: {
         smooth: {
@@ -234,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
         hover: true,
         hoverConnectedEdges: true,
         tooltipDelay: isMobileDevice ? 1000 : 200,
-        navigationButtons: true,
+        navigationButtons: false, // Disable built-in navigation buttons
         keyboard: !isMobileDevice,
         multiselect: !isMobileDevice,
         selectable: true,
@@ -242,65 +240,193 @@ document.addEventListener('DOMContentLoaded', function () {
         dragView: true,
         hideEdgesOnDrag: isMobileDevice,
         hideEdgesOnZoom: isMobileDevice,
-        // Limit interactivity on mobile to prevent overflow
-        dragNodes: !isMobileDevice || containerWidth > 400,
-        multiselect: !isMobileDevice
+        dragNodes: !isMobileDevice || containerWidth > 400
       },
       physics: {
         enabled: true,
         solver: 'forceAtlas2Based',
-        forceAtlas2Based: {
-          gravitationalConstant: -60, // Less negative for tighter clustering
-          centralGravity: 0.025, // Increased to keep nodes centered
-          springLength: isMobileDevice ? 80 : 100, // Shorter spring length
-          springConstant: 0.12, // Stronger springs
-          damping: 0.4,
-          avoidOverlap: 1.0 // Maximum overlap avoidance
-        },
         stabilization: {
           enabled: true,
-          iterations: 1500, // More iterations for better stabilization
+          iterations: 500,
           updateInterval: 25,
-          fit: true,
-          onlyDynamicEdges: false,
-          adaptiveTimestep: true
+          fit: true
         },
-      },
-      // CRITICAL: Keep nodes inside container boundaries
-      bounds: {
-        enabled: true,
-        min: {
-          x: -containerWidth / 2 + 50,
-          y: -containerHeight / 2 + 50
-        },
-        max: {
-          x: containerWidth / 2 - 50,
-          y: containerHeight / 2 - 50
-        },
-        useAvailableNodes: true // Enable to calculate bounds from all nodes
+        forceAtlas2Based: {
+          gravitationalConstant: -35,
+          centralGravity: 0.015,
+          springLength: isMobileDevice ? 120 : 150,
+          springConstant: 0.05,
+          damping: 0.7,
+          avoidOverlap: 0.5
+        }
       },
       configure: {
-        enabled: false,
-      },
-      clustering: {
         enabled: false
       }
     };
 
-    // Create the network with more aggressive options
-    if (network) {
+    // Create the network with fixed options
+    if (network && typeof network.destroy === 'function') {
       network.destroy(); // Clean up any existing network instance
     }
 
+    // Create new network
     network = new vis.Network(graphContainer, data, options);
 
-    // Force immediate containment
-    setTimeout(enforceContainment, 100);
+    // Set up fixed zoom controls (always visible)
+    setupFixedZoomControls();
 
-    // Setup event listeners
+    // Initial fit with a slight delay to allow rendering
+    setTimeout(() => {
+      try {
+        network.fit({
+          animation: {
+            duration: 1000,
+            easingFunction: 'easeOutQuint'
+          }
+        });
+      } catch (e) {
+        console.error("Error during initial fit:", e);
+      }
+    }, 500);
+
+    // Setup basic event listeners
+    setupBasicEventHandlers();
+
+    // Handle mobile touch events
+    if (isMobileDevice) {
+      setupMobileTouchHandlers();
+    }
+
+    // After stabilization, disable physics to prevent jumping
+    network.on("stabilizationIterationsDone", function () {
+      setTimeout(() => {
+        try {
+          network.fit({
+            animation: {
+              duration: 800,
+              easingFunction: 'easeOutQuint'
+            }
+          });
+
+          // Disable physics after stabilization to prevent jumping
+          network.setOptions({ physics: { enabled: false } });
+          isStabilized = true;
+        } catch (e) {
+          console.error("Error during stabilization:", e);
+        }
+      }, 500);
+    });
+  }
+
+  // Setup fixed zoom controls that are always visible
+  function setupFixedZoomControls() {
+    if (!network) return;
+
+    // Find the elements; if they don't exist yet, create them dynamically
+    let fixedZoomInBtn = document.getElementById('fixedZoomInBtn');
+    let fixedZoomOutBtn = document.getElementById('fixedZoomOutBtn');
+    let fixedFitBtn = document.getElementById('fixedFitBtn');
+
+    // If buttons don't exist, create them dynamically
+    if (!fixedFitBtn) {
+      fixedFitBtn = document.createElement('button');
+      fixedFitBtn.id = 'fixedFitBtn';
+      fixedFitBtn.className = 'fixed-zoom-btn fixed-zoom-top-right';
+      fixedFitBtn.title = 'Fit Graph';
+      fixedFitBtn.innerHTML = '<i class="fas fa-expand"></i>';
+      graphContainer.appendChild(fixedFitBtn);
+    }
+
+    if (!fixedZoomOutBtn) {
+      fixedZoomOutBtn = document.createElement('button');
+      fixedZoomOutBtn.id = 'fixedZoomOutBtn';
+      fixedZoomOutBtn.className = 'fixed-zoom-btn fixed-zoom-bottom-left';
+      fixedZoomOutBtn.title = 'Zoom Out';
+      fixedZoomOutBtn.innerHTML = '<i class="fas fa-minus"></i>';
+      graphContainer.appendChild(fixedZoomOutBtn);
+    }
+
+    if (!fixedZoomInBtn) {
+      fixedZoomInBtn = document.createElement('button');
+      fixedZoomInBtn.id = 'fixedZoomInBtn';
+      fixedZoomInBtn.className = 'fixed-zoom-btn fixed-zoom-bottom-right';
+      fixedZoomInBtn.title = 'Zoom In';
+      fixedZoomInBtn.innerHTML = '<i class="fas fa-plus"></i>';
+      graphContainer.appendChild(fixedZoomInBtn);
+    }
+
+    // Set up event listeners for the fixed controls
+    fixedZoomInBtn = document.getElementById('fixedZoomInBtn');
+    if (fixedZoomInBtn) {
+      // Remove existing listeners first to prevent duplicates
+      const newZoomInBtn = fixedZoomInBtn.cloneNode(true);
+      if (fixedZoomInBtn.parentNode) {
+        fixedZoomInBtn.parentNode.replaceChild(newZoomInBtn, fixedZoomInBtn);
+      }
+
+      newZoomInBtn.addEventListener('click', function (e) {
+        e.stopPropagation(); // Prevent event bubbling
+        try {
+          const scale = network.getScale() * 1.2;
+          network.moveTo({ scale: scale, animation: { duration: 300, easingFunction: 'easeOutQuad' } });
+        } catch (err) {
+          console.error("Error in fixed zoom in:", err);
+        }
+      });
+    }
+
+    fixedZoomOutBtn = document.getElementById('fixedZoomOutBtn');
+    if (fixedZoomOutBtn) {
+      // Remove existing listeners first to prevent duplicates
+      const newZoomOutBtn = fixedZoomOutBtn.cloneNode(true);
+      if (fixedZoomOutBtn.parentNode) {
+        fixedZoomOutBtn.parentNode.replaceChild(newZoomOutBtn, fixedZoomOutBtn);
+      }
+
+      newZoomOutBtn.addEventListener('click', function (e) {
+        e.stopPropagation(); // Prevent event bubbling
+        try {
+          const scale = network.getScale() * 0.8;
+          network.moveTo({ scale: scale, animation: { duration: 300, easingFunction: 'easeOutQuad' } });
+        } catch (err) {
+          console.error("Error in fixed zoom out:", err);
+        }
+      });
+    }
+
+    fixedFitBtn = document.getElementById('fixedFitBtn');
+    if (fixedFitBtn) {
+      // Remove existing listeners first to prevent duplicates
+      const newFitBtn = fixedFitBtn.cloneNode(true);
+      if (fixedFitBtn.parentNode) {
+        fixedFitBtn.parentNode.replaceChild(newFitBtn, fixedFitBtn);
+      }
+
+      newFitBtn.addEventListener('click', function (e) {
+        e.stopPropagation(); // Prevent event bubbling
+        try {
+          network.fit({ animation: { duration: 600, easingFunction: 'easeOutQuad' } });
+        } catch (err) {
+          console.error("Error in fixed fit:", err);
+        }
+      });
+    }
+  }
+
+  // Setup only essential event handlers
+  function setupBasicEventHandlers() {
+    if (!network) return;
+
+    // Clear previous events
+    network.off("click");
+    network.off("hoverNode");
+    network.off("blurNode");
+
+    // Handle node click to display info
     network.on('click', function (params) {
       clearInfoPanel();
-      if (params.nodes.length > 0) {
+      if (params.nodes && params.nodes.length > 0) {
         const nodeId = params.nodes[0];
         const selectedNode = allNodes.find(n => n.id === nodeId);
         if (selectedNode) {
@@ -315,372 +441,204 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Glowing effect on hover
     network.on('hoverNode', function (params) {
-      const nodeId = params.node;
-      const node = nodesDataSet.get(nodeId);
-      const category = node.category || node.group;
-      const glowColor = colors[category].hover.border;
+      try {
+        const nodeId = params.node;
+        const node = nodesDataSet.get(nodeId);
+        if (node) {
+          const category = node.category || node.group;
+          const glowColor = colors[category].hover.border;
 
-      nodesDataSet.update({
-        id: nodeId,
-        shadow: {
-          enabled: true,
-          color: glowColor,
-          size: 15,
-          x: 0,
-          y: 0
+          nodesDataSet.update({
+            id: nodeId,
+            shadow: {
+              enabled: true,
+              color: glowColor,
+              size: 15,
+              x: 0,
+              y: 0
+            }
+          });
         }
-      });
+      } catch (e) {
+        console.error("Error in hoverNode:", e);
+      }
     });
 
     // Remove glow on blur
     network.on('blurNode', function (params) {
-      const nodeId = params.node;
-      nodesDataSet.update({
-        id: nodeId,
-        shadow: {
-          enabled: true,
-          color: 'rgba(0,0,0,0.3)',
-          size: 7,
-          x: 3,
-          y: 3
-        }
-      });
-    });
-
-    // Listen for resize to keep nodes inside container
-    window.addEventListener('resize', function () {
-      // Update isMobileDevice
-      isMobileDevice = window.innerWidth <= 768;
-
-      // Delay to allow DOM to settle
-      setTimeout(() => {
-        enforceContainment();
-
-        // Update bounds based on new container size
-        const newRect = graphContainer.getBoundingClientRect();
-        network.setOptions({
-          bounds: {
-            min: {
-              x: -newRect.width / 2 + 50,
-              y: -newRect.height / 2 + 50
-            },
-            max: {
-              x: newRect.width / 2 - 50,
-              y: newRect.height / 2 - 50
-            }
+      try {
+        const nodeId = params.node;
+        nodesDataSet.update({
+          id: nodeId,
+          shadow: {
+            enabled: true,
+            color: 'rgba(0,0,0,0.3)',
+            size: 7,
+            x: 3,
+            y: 3
           }
         });
-      }, 100);
-    });
-
-    // KEY FIX: After zoom/drag operations, force containment
-    network.on('dragEnd', enforceContainment);
-    network.on('zoom', throttledContainment);
-    network.on('dragStart', () => {
-      if (isStabilized) {
-        // Temporarily disable physics while dragging for better performance
-        network.setOptions({ physics: { enabled: false } });
+      } catch (e) {
+        console.error("Error in blurNode:", e);
       }
     });
-    network.on('dragEnd', () => {
-      // Re-enable physics after drag if needed
-      setTimeout(() => {
-        if (isStabilized) {
-          enforceContainment();
-        }
-      }, 50);
-    });
 
-    // After stabilization, apply more containment checks
-    network.on("stabilizationIterationsDone", function () {
-      isStabilized = true;
+    // Simple window resize handler
+    const handleResize = function () {
+      isMobileDevice = window.innerWidth <= 768;
 
-      // First fit to ensure all nodes are visible
-      network.fit({ animation: { duration: 800, easingFunction: 'easeInOutQuad' } });
-
-      // Apply multiple checks with timing
-      setTimeout(enforceContainment, 200);
-      setTimeout(() => {
-        // Disable physics after stabilization for better performance
-        network.setOptions({ physics: { enabled: false } });
-        enforceContainment();
-
-        // Set up periodic containment checks
-        containmentInterval = setInterval(enforceContainment, 3000);
-      }, 1000);
-    });
-
-    // Mobile touch handling
-    if (isMobileDevice) {
-      setupMobileTouchHandlers();
-    }
-
-    // Add canvas animation effects
-    addCanvasEffects();
-
-    // Force a final fit
-    setTimeout(() => {
-      network.fit({ animation: { duration: 500, easingFunction: 'easeOutQuad' } });
-    }, 1500);
-  }
-
-  // Throttle containment checks to improve performance
-  function throttledContainment() {
-    const now = Date.now();
-    if (now - lastContainmentCheck > 200) { // Only run every 200ms
-      lastContainmentCheck = now;
-      enforceContainment();
-    }
-  }
-
-  // Enhanced comprehensive function to enforce containment
-  function enforceContainment() {
-    if (!network) return;
-
-    // First ensure canvas dimensions match container
-    const container = graphContainer.getBoundingClientRect();
-    const canvas = network.canvas.frame.canvas;
-
-    // Update canvas dimensions if they've changed
-    if (canvas.width !== container.width || canvas.height !== container.height) {
-      canvas.width = container.width;
-      canvas.height = container.height;
-      canvas.style.width = `${container.width}px`;
-      canvas.style.height = `${container.height}px`;
-    }
-
-    // Get current positions
-    const positions = network.getPositions();
-    const nodeIds = Object.keys(positions);
-
-    if (nodeIds.length === 0) return;
-
-    // Check if any nodes are outside or close to the edge
-    const padding = Math.max(30, container.width * 0.05); // Dynamic padding based on container size
-    let needsAdjustment = false;
-    let hasOutOfBoundsNodes = false;
-
-    const viewPosition = network.getViewPosition();
-    const scale = network.getScale();
-
-    // Calculate visible area in canvas coordinates
-    const visibleArea = {
-      left: viewPosition.x - (container.width / 2) / scale,
-      top: viewPosition.y - (container.height / 2) / scale,
-      right: viewPosition.x + (container.width / 2) / scale,
-      bottom: viewPosition.y + (container.height / 2) / scale
+      // Simple fit operation on resize
+      if (network) {
+        setTimeout(() => {
+          try {
+            network.fit({
+              animation: {
+                duration: 500,
+                easingFunction: 'easeOutCubic'
+              }
+            });
+          } catch (e) {
+            console.error("Error during resize fit:", e);
+          }
+        }, 250);
+      }
     };
 
-    // Add safety margin
-    const safetyMargin = 50 / scale;
-    visibleArea.left += safetyMargin;
-    visibleArea.top += safetyMargin;
-    visibleArea.right -= safetyMargin;
-    visibleArea.bottom -= safetyMargin;
-
-    // Check nodes against visible area
-    for (const nodeId of nodeIds) {
-      const pos = positions[nodeId];
-
-      // Check if node is outside visible area
-      if (pos.x < visibleArea.left || pos.y < visibleArea.top ||
-        pos.x > visibleArea.right || pos.y > visibleArea.bottom) {
-        hasOutOfBoundsNodes = true;
-        break;
-      }
-
-      // Check DOM position for nodes near edges
-      const domPos = network.canvasToDOM(pos);
-      if (domPos.x < padding || domPos.y < padding ||
-        domPos.x > container.width - padding || domPos.y > container.height - padding) {
-        needsAdjustment = true;
-      }
-    }
-
-    // If any node is out of bounds, fit the view with animation
-    if (hasOutOfBoundsNodes) {
-      network.fit({
-        animation: {
-          duration: 500,
-          easingFunction: 'easeOutQuad'
-        },
-        scale: scale * 0.9 // Scale slightly to ensure all nodes are visible
-      });
-    }
-    // If nodes are near edges but not out of bounds, make minor adjustments
-    else if (needsAdjustment && isStabilized) {
-      // Calculate the current scale
-      const currentScale = network.getScale();
-
-      // Slightly scale down and center
-      network.moveTo({
-        scale: currentScale * 0.95,
-        animation: {
-          duration: 300,
-          easingFunction: 'easeOutQuad'
-        }
-      });
-    }
-
-    // Force redraw after adjustment
-    network.redraw();
+    // Remove existing and add clean resize handler
+    window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
   }
 
-  // Setup mobile touch handlers
+  // Simple mobile touch handlers with minimal interference
   function setupMobileTouchHandlers() {
-    let lastTap = 0;
-    let initialPinchDistance = 0;
-    let initialScale = 0;
-    let preventScrollOnTouch = false;
+    // Clear any existing handlers
+    const graphContainerEl = document.getElementById('graph-container');
+    if (!graphContainerEl || !network) return;
 
-    graphContainer.addEventListener('touchstart', function (e) {
-      if (e.touches.length === 2) {
-        // Pinch zoom gesture detected
-        initialPinchDistance = Math.hypot(
-          e.touches[0].clientX - e.touches[1].clientX,
-          e.touches[0].clientY - e.touches[1].clientY
-        );
-        initialScale = network.getScale();
-        preventScrollOnTouch = true;
-        e.preventDefault();
-      } else if (e.touches.length === 1) {
-        // Single touch - could be drag or tap
-        touchStarted = {
-          x: e.touches[0].clientX,
-          y: e.touches[0].clientY,
-          time: new Date().getTime()
-        };
+    // Store the original zoom control buttons to avoid duplication
+    const zoomInBtn = document.getElementById('zoomInBtn');
+    const zoomOutBtn = document.getElementById('zoomOutBtn');
+    const fitBtn = document.getElementById('fitBtn');
+
+    // Check if all buttons exist before proceeding
+    if (!zoomInBtn || !zoomOutBtn || !fitBtn) {
+      console.warn("Mobile control buttons not found. Mobile controls will be limited.");
+      return;
+    }
+
+    // Clean old handlers
+    const newZoomInBtn = zoomInBtn.cloneNode(true);
+    const newZoomOutBtn = zoomOutBtn.cloneNode(true);
+    const newFitBtn = fitBtn.cloneNode(true);
+
+    zoomInBtn.parentNode.replaceChild(newZoomInBtn, zoomInBtn);
+    zoomOutBtn.parentNode.replaceChild(newZoomOutBtn, zoomOutBtn);
+    fitBtn.parentNode.replaceChild(newFitBtn, fitBtn);
+
+    // Add new simple handlers
+    newZoomInBtn.addEventListener('click', function () {
+      try {
+        const scale = network.getScale() * 1.2;
+        network.moveTo({ scale: scale, animation: { duration: 300, easingFunction: 'easeOutQuad' } });
+      } catch (e) {
+        console.error("Error in zoom in:", e);
       }
-    }, { passive: false });
+    });
 
-    graphContainer.addEventListener('touchmove', function (e) {
-      if (preventScrollOnTouch) {
-        e.preventDefault();
+    newZoomOutBtn.addEventListener('click', function () {
+      try {
+        const scale = network.getScale() * 0.8;
+        network.moveTo({ scale: scale, animation: { duration: 300, easingFunction: 'easeOutQuad' } });
+      } catch (e) {
+        console.error("Error in zoom out:", e);
       }
+    });
 
-      if (e.touches.length === 2) {
-        // Handle pinch zoom
-        const currentDistance = Math.hypot(
-          e.touches[0].clientX - e.touches[1].clientX,
-          e.touches[0].clientY - e.touches[1].clientY
-        );
-
-        // Calculate new scale
-        if (initialPinchDistance > 0) {
-          const scaleFactor = currentDistance / initialPinchDistance;
-          const newScale = initialScale * scaleFactor;
-
-          // Update scale but maintain position
-          network.moveTo({
-            scale: newScale,
-            animation: false
-          });
-
-          // Check containment after zoom
-          throttledContainment();
-        }
-
-        e.preventDefault();
+    newFitBtn.addEventListener('click', function () {
+      try {
+        network.fit({ animation: { duration: 800, easingFunction: 'easeOutQuad' } });
+      } catch (e) {
+        console.error("Error in fit:", e);
       }
-    }, { passive: false });
+    });
 
-    graphContainer.addEventListener('touchend', function (e) {
-      const currentTime = new Date().getTime();
-      preventScrollOnTouch = false;
-
-      if (touchStarted && e.changedTouches.length === 1) {
-        const touchEnded = {
-          x: e.changedTouches[0].clientX,
-          y: e.changedTouches[0].clientY,
-          time: currentTime
-        };
-
-        // Check if it's a quick tap (under 300ms)
-        const touchDuration = touchEnded.time - touchStarted.time;
-        if (touchDuration < 300) {
-          // Check if it's a double tap
-          const tapLength = touchEnded.time - lastTap;
-          if (tapLength < 300 && tapLength > 0) {
-            // Double tap detected - zoom in at that position
-            const position = network.DOMtoCanvas({
-              x: e.changedTouches[0].clientX,
-              y: e.changedTouches[0].clientY
-            });
-
-            network.moveTo({
-              position: position,
-              scale: network.getScale() * 1.5,
-              animation: { duration: 500, easingFunction: 'easeInOutQuad' }
-            });
-
-            // Check containment after zoom
-            setTimeout(enforceContainment, 600);
-            e.preventDefault();
-          }
-
-          lastTap = currentTime;
-        } else {
-          // Was a drag, check containment
-          enforceContainment();
-        }
-      }
-
-      // Reset touch tracking
-      touchStarted = null;
-      initialPinchDistance = 0;
-    }, { passive: false });
-
-    // Override default page scroll when interacting with graph
-    graphContainer.addEventListener('wheel', function (e) {
-      if (e.target.closest('#graph-container')) {
-        // Prevent scroll and allow network zoom
-        e.preventDefault();
-
-        // After zoom, check containment
-        setTimeout(throttledContainment, 50);
-      }
-    }, { passive: false });
+    // Show the network controls overlay for mobile
+    const networkControls = document.querySelector('.network-controls-overlay');
+    if (networkControls) {
+      networkControls.style.display = 'flex';
+    }
   }
 
   // Initialize mobile navigation controls
   function initializeMobileControls() {
     if (!isMobileDevice) return;
 
+    // Make sure all required elements exist
+    const zoomInBtn = document.getElementById('zoomInBtn');
+    const zoomOutBtn = document.getElementById('zoomOutBtn');
+    const fitBtn = document.getElementById('fitBtn');
+    const graphNavBtn = document.getElementById('graphNavBtn');
+    const viewInfoBtn = document.getElementById('viewInfoBtn');
+    const viewCatalogBtn = document.getElementById('viewCatalogBtn');
+    const searchBtn = document.getElementById('searchBtn');
+    const networkControlsOverlay = document.querySelector('.network-controls-overlay');
+
+    if (!network || !networkControlsOverlay) {
+      console.warn("Required elements for mobile controls not found");
+      return;
+    }
+
     // Graph navigation buttons
-    zoomInBtn.addEventListener('click', function () {
-      const scale = network.getScale() * 1.2;
-      network.moveTo({ scale: scale, animation: true });
-    });
+    if (zoomInBtn) {
+      zoomInBtn.addEventListener('click', function () {
+        const scale = network.getScale() * 1.2;
+        network.moveTo({ scale: scale, animation: true });
+      });
+    }
 
-    zoomOutBtn.addEventListener('click', function () {
-      const scale = network.getScale() * 0.8;
-      network.moveTo({ scale: scale, animation: true });
-    });
+    if (zoomOutBtn) {
+      zoomOutBtn.addEventListener('click', function () {
+        const scale = network.getScale() * 0.8;
+        network.moveTo({ scale: scale, animation: true });
+      });
+    }
 
-    fitBtn.addEventListener('click', function () {
-      network.fit({ animation: { duration: 800, easingFunction: 'easeInOutQuad' } });
-    });
+    if (fitBtn) {
+      fitBtn.addEventListener('click', function () {
+        network.fit({ animation: { duration: 800, easingFunction: 'easeInOutQuad' } });
+      });
+    }
 
     // Bottom navigation buttons
-    graphNavBtn.addEventListener('click', function () {
-      networkControlsOverlay.style.display = networkControlsOverlay.style.display === 'flex' ? 'none' : 'flex';
-      graphSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+    if (graphNavBtn && networkControlsOverlay && graphSection) {
+      graphNavBtn.addEventListener('click', function () {
+        networkControlsOverlay.style.display = networkControlsOverlay.style.display === 'flex' ? 'none' : 'flex';
+        graphSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
 
-    viewInfoBtn.addEventListener('click', function () {
-      infoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+    if (viewInfoBtn && infoSection) {
+      viewInfoBtn.addEventListener('click', function () {
+        infoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
 
-    viewCatalogBtn.addEventListener('click', function () {
-      tablesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+    if (viewCatalogBtn && tablesSection) {
+      viewCatalogBtn.addEventListener('click', function () {
+        tablesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
 
-    searchBtn.addEventListener('click', function () {
-      // Focus on search input and scroll to controls
-      searchInput.focus();
-      const controls = document.querySelector('.controls');
-      controls.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+    if (searchBtn && searchInput) {
+      searchBtn.addEventListener('click', function () {
+        // Focus on search input and scroll to controls
+        searchInput.focus();
+        const controls = document.querySelector('.controls');
+        if (controls) {
+          controls.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
 
     // Detect orientation changes to adjust layout
     window.addEventListener('orientationchange', function () {
@@ -692,120 +650,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hide navigation overlay when clicking outside
-    document.addEventListener('click', function (event) {
-      if (networkControlsOverlay.style.display === 'flex' &&
-        !networkControlsOverlay.contains(event.target) &&
-        event.target !== graphNavBtn) {
-        networkControlsOverlay.style.display = 'none';
-      }
-    });
-  }
-
-  // Add subtle particle effects to the graph background
-  function addCanvasEffects() {
-    if (!network) return;
-
-    // Get the canvas and its context for adding visual effects
-    const canvas = network.canvas.frame.canvas;
-    const ctx = canvas.getContext('2d');
-
-    // Create an array of particles (more on mobile for visual impact)
-    const particleCount = isMobileDevice ? 15 : 25;
-    const particles = [];
-
-    // Configure particles
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        radius: Math.random() * 2 + 1,
-        speedX: Math.random() * 0.5 - 0.25,
-        speedY: Math.random() * 0.5 - 0.25,
-        color: 'rgba(201, 162, 39, ' + (Math.random() * 0.4 + 0.1) + ')',
-        pulse: 0,
-        pulseSpeed: Math.random() * 0.02 + 0.01
-      });
-    }
-
-    // Animation frame for particles
-    let animationFrame;
-
-    // Function to draw and update particles
-    function drawParticles() {
-      // Clear previous frame - but don't clear the whole canvas to avoid flickering
-      // The network will handle its own rendering
-
-      // Update and draw particles
-      particles.forEach(p => {
-        // Update position
-        p.x += p.speedX;
-        p.y += p.speedY;
-
-        // Make particles pulse
-        p.pulse += p.pulseSpeed;
-        const pulseFactor = Math.sin(p.pulse) * 0.5 + 0.5;
-        const adjustedRadius = p.radius * (1 + pulseFactor * 0.3);
-
-        // Wrap around edges with padding to ensure containment
-        const padding = 50;
-        if (p.x < -padding) p.x = canvas.width + padding;
-        if (p.y < -padding) p.y = canvas.height + padding;
-        if (p.x > canvas.width + padding) p.x = -padding;
-        if (p.y > canvas.height + padding) p.y = -padding;
-
-        // Only draw particles that are in the visible area with padding
-        if (p.x > -padding && p.x < canvas.width + padding &&
-          p.y > -padding && p.y < canvas.height + padding) {
-
-          // Create gradient for particle
-          const gradient = ctx.createRadialGradient(
-            p.x, p.y, 0,
-            p.x, p.y, adjustedRadius * 2.5
-          );
-          gradient.addColorStop(0, p.color.replace(')', ', ' + (0.8 * pulseFactor) + ')'));
-          gradient.addColorStop(1, p.color.replace(')', ', 0)'));
-
-          // Draw particle with gradient
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, adjustedRadius * 2.5, 0, Math.PI * 2);
-          ctx.fillStyle = gradient;
-          ctx.fill();
+    if (networkControlsOverlay && graphNavBtn) {
+      document.addEventListener('click', function (event) {
+        if (networkControlsOverlay.style.display === 'flex' &&
+          !networkControlsOverlay.contains(event.target) &&
+          event.target !== graphNavBtn) {
+          networkControlsOverlay.style.display = 'none';
         }
       });
-
-      // Request next frame
-      animationFrame = requestAnimationFrame(drawParticles);
     }
-
-    // Start animation
-    drawParticles();
-
-    // Setup listener to cancel animation when component is unmounted or reinitialized
-    window.addEventListener('beforeunload', () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-    });
-
-    // Also cancel when network is destroyed
-    network.on('destroy', () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-    });
-
-    // Redraw particles when canvas size changes
-    const resizeObserver = new ResizeObserver(() => {
-      // Update particles to new canvas dimensions
-      particles.forEach(p => {
-        // Keep particles within new bounds
-        if (p.x > canvas.width) p.x = Math.random() * canvas.width;
-        if (p.y > canvas.height) p.y = Math.random() * canvas.height;
-      });
-    });
-
-    // Observe the canvas for size changes
-    resizeObserver.observe(canvas);
   }
 
   // --- Display Node Information ---

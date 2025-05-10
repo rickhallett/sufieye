@@ -36,9 +36,9 @@
   --color-segment-glow: #8a3a6d;
   /* Glowing magenta */
 
-  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-heading: 'Reem Kufi', 'Aref Ruqaa', 'Playfair Display', serif;
   --font-body: 'Cormorant Garamond', Georgia, serif;
-  --font-arabic: 'Amiri', serif;
+  --font-arabic: 'Amiri', 'Scheherazade New', serif;
 
   --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.15);
   --shadow-intense: 0 8px 20px rgba(0, 0, 0, 0.25);
@@ -146,22 +146,40 @@ header::before {
 
 header h1 {
   margin: 0;
-  font-size: 2.5em;
+  font-size: 2.8em;
   font-weight: 700;
-  font-family: var(--font-heading);
+  font-family: var(--font-arabic);
   letter-spacing: 0.05em;
   color: var(--color-light);
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
   word-wrap: break-word;
   /* Allow text to wrap properly */
+  line-height: 1.5;
+  padding-bottom: 0.2em;
+  text-align: center;
+  direction: rtl;
+  position: relative;
+}
+
+header h1::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: var(--color-accent);
+  margin: 15px auto 0;
+  box-shadow: 0 0 10px var(--color-accent-glow);
+  border-radius: 3px;
 }
 
 header .subtitle {
   font-family: var(--font-arabic);
   font-style: italic;
-  margin-top: 0.5em;
-  font-size: 1.2em;
+  margin-top: 0.8em;
+  font-size: 1.3em;
   opacity: 0.9;
+  direction: rtl;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* --- Main Container --- */
@@ -195,8 +213,8 @@ header .subtitle {
   box-sizing: border-box;
   overflow: hidden;
   /* Prevent overflow */
-  contain: strict;
-  /* Strict containment for better rendering */
+  contain: layout;
+  /* Changed from strict to layout for better rendering while allowing proper size calculations */
 }
 
 .controls {
@@ -286,9 +304,8 @@ header .subtitle {
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
-  contain: strict;
-  /* Strict containment for layout, size, and paint */
-  /* Modern browsers: contain the rendering */
+  contain: layout size;
+  /* Changed from strict to layout size to prevent overflow issues */
 }
 
 /* Fix for Vis.js rendering */
@@ -299,15 +316,15 @@ header .subtitle {
   left: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  contain: strict !important;
-  /* Strict containment for better rendering */
+  contain: layout size !important;
+  /* Changed from strict to layout size to prevent overflow issues */
 }
 
 .vis-network canvas {
   border-radius: var(--border-radius);
   overflow: hidden !important;
-  contain: strict !important;
-  /* Strict containment for canvas */
+  contain: layout size !important;
+  /* Changed from strict to layout size to prevent overflow issues */
 }
 
 /* Loading animation for graph */
@@ -394,10 +411,12 @@ header .subtitle {
   margin-bottom: 20px;
   word-wrap: break-word;
   /* Ensure text wraps properly */
+  text-align: right;
+  direction: rtl;
 }
 
 #info-panel h2 i {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 #info-panel h3 {
@@ -410,10 +429,12 @@ header .subtitle {
   margin-bottom: 15px;
   word-wrap: break-word;
   /* Ensure text wraps properly */
+  text-align: right;
+  direction: rtl;
 }
 
 #info-panel h3 i {
-  margin-right: 8px;
+  margin-left: 8px;
 }
 
 #info-panel p {
@@ -425,6 +446,10 @@ header .subtitle {
   /* Ensure text wraps properly */
   max-width: 100%;
   /* Prevent overflow */
+  white-space: normal;
+  /* Ensure text can wrap */
+  hyphens: auto;
+  /* Enable hyphenation for better word breaks */
 }
 
 #info-panel p strong {
@@ -452,6 +477,10 @@ header .subtitle {
   /* Ensure text wraps properly */
   width: 100%;
   box-sizing: border-box;
+  white-space: normal;
+  /* Ensure text can wrap */
+  hyphens: auto;
+  /* Enable hyphenation for better word breaks */
 }
 
 #info-panel li:hover {
@@ -515,6 +544,8 @@ header .subtitle {
   z-index: 1;
   word-wrap: break-word;
   /* Allow text wrapping */
+  text-align: center;
+  direction: rtl;
 }
 
 .table-container {
@@ -562,10 +593,12 @@ header .subtitle {
   /* Allow text to wrap */
   word-wrap: break-word;
   /* Ensure text wraps properly */
+  text-align: right;
+  direction: rtl;
 }
 
 .table-container h3 i {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 table {
@@ -590,6 +623,8 @@ td {
   /* Prevent overflow */
   white-space: normal;
   /* Allow text to wrap */
+  hyphens: auto;
+  /* Enable hyphenation for better word breaks */
 }
 
 th {
@@ -676,6 +711,7 @@ button,
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
+  direction: rtl;
 }
 
 button:hover,
@@ -693,7 +729,7 @@ button:active,
 
 button i,
 #exportJsonButton i {
-  margin-right: 8px;
+  margin-left: 8px;
 }
 
 /* --- Vis.js Network Node Styling --- */
@@ -730,6 +766,7 @@ footer {
   width: 100%;
   contain: content;
   /* Contain layout changes */
+  direction: rtl;
 }
 
 /* --- Mobile Navigation --- */
@@ -818,6 +855,52 @@ footer {
   transform: scale(0.95);
 }
 
+/* Fixed zoom controls (always visible) */
+.fixed-zoom-btn {
+  position: absolute;
+  background-color: rgba(26, 16, 37, 0.6);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 50;
+  opacity: 0.7;
+}
+
+.fixed-zoom-btn:hover {
+  background-color: rgba(26, 16, 37, 0.9);
+  color: var(--color-accent-glow);
+  opacity: 1;
+}
+
+.fixed-zoom-btn:active {
+  transform: scale(0.95);
+}
+
+.fixed-zoom-top-right {
+  top: 15px;
+  right: 15px;
+}
+
+.fixed-zoom-bottom-left {
+  bottom: 15px;
+  left: 15px;
+}
+
+.fixed-zoom-bottom-right {
+  bottom: 15px;
+  right: 15px;
+}
+
 /* --- Card View for Mobile Tables --- */
 .card-table {
   display: none;
@@ -884,6 +967,60 @@ footer {
   color: rgba(255, 255, 255, 0.7);
 }
 
+/* Arabic text specific styling */
+[dir="rtl"],
+[lang="ar"] {
+  letter-spacing: 0;
+  /* Arabic doesn't need letter spacing */
+  line-height: 1.7;
+  /* Slightly taller line height for Arabic */
+}
+
+.arabic-text {
+  font-family: var(--font-arabic);
+  direction: rtl;
+  text-align: right;
+}
+
+/* Ottoman style decorative elements */
+.ottoman-decoration {
+  position: relative;
+}
+
+.ottoman-decoration::before,
+.ottoman-decoration::after {
+  content: "☪";
+  color: var(--color-accent);
+  opacity: 0.5;
+  font-size: 0.9em;
+  margin: 0 10px;
+}
+
+/* Decorative flourish for section titles */
+h2.decorated-title {
+  position: relative;
+  overflow: visible;
+}
+
+h2.decorated-title::before,
+h2.decorated-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2px;
+  background: var(--color-accent);
+  opacity: 0.7;
+}
+
+h2.decorated-title::before {
+  right: calc(100% + 15px);
+}
+
+h2.decorated-title::after {
+  left: calc(100% + 15px);
+}
+
 /* --- Responsive Adjustments --- */
 @media (max-width: 1024px) {
   .container {
@@ -909,8 +1046,8 @@ footer {
   body {
     font-size: 16px;
     padding: 0;
-    contain: content;
-    /* Strict containment for better rendering */
+    contain: layout;
+    /* Changed from content to layout for better rendering */
   }
 
   .container {
@@ -930,15 +1067,15 @@ footer {
     margin-right: 0;
     margin-bottom: 15px;
     min-width: initial;
-    contain: content;
-    /* Contain layout changes */
+    contain: layout;
+    /* Changed from content to layout for better rendering */
   }
 
   #graph-container {
     height: 450px;
     /* Taller on mobile for better visualization */
-    contain: strict;
-    /* Strict containment for better rendering */
+    contain: layout size;
+    /* Changed from strict to layout size to prevent overflow issues */
   }
 
   #info-section {
@@ -979,6 +1116,8 @@ footer {
     /* Prevent overflow */
     text-overflow: ellipsis;
     /* Handle long text */
+    white-space: nowrap;
+    /* Prevent text wrapping in inputs and selects */
   }
 
   .controls label {
@@ -1022,6 +1161,10 @@ footer {
     font-size: 0.9em;
     word-break: break-word;
     /* Break long words to prevent overflow */
+    white-space: normal;
+    /* Ensure text can wrap */
+    hyphens: auto;
+    /* Enable hyphenation for better word breaks */
   }
 
   header {
@@ -1134,8 +1277,8 @@ footer {
 
   #graph-container {
     height: 380px;
-    contain: strict;
-    /* Strict containment for better rendering */
+    contain: layout size;
+    /* Changed from strict to layout size to prevent overflow issues */
   }
 
   #info-section {

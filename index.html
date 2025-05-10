@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Amiri:ital@0;1&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Reem+Kufi:wght@400;500;600;700&family=Aref+Ruqaa:wght@400;700&family=Scheherazade+New:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,8 +23,8 @@
 
 <body>
   <header>
-    <h1>The Quranic Sufi Interpretation Graph</h1>
-    <p class="subtitle">Exploring the interconnected paths of divine knowledge</p>
+    <h1>القرآن الكريم تفسير صوفي</h1>
+    <p class="subtitle">استكشاف المسارات المترابطة للمعرفة الإلهية</p>
   </header>
 
   <div class="container">
@@ -59,11 +59,19 @@
           <button id="zoomOutBtn"><i class="fas fa-minus"></i></button>
           <button id="fitBtn"><i class="fas fa-expand"></i></button>
         </div>
+
+        <!-- Fixed zoom controls, always visible -->
+        <button id="fixedFitBtn" class="fixed-zoom-btn fixed-zoom-top-right" title="Fit Graph"><i
+            class="fas fa-expand"></i></button>
+        <button id="fixedZoomOutBtn" class="fixed-zoom-btn fixed-zoom-bottom-left" title="Zoom Out"><i
+            class="fas fa-minus"></i></button>
+        <button id="fixedZoomInBtn" class="fixed-zoom-btn fixed-zoom-bottom-right" title="Zoom In"><i
+            class="fas fa-plus"></i></button>
       </div>
     </section>
 
     <aside id="info-section">
-      <h2><i class="fas fa-gem"></i> Wisdom Illumination</h2>
+      <h2><i class="fas fa-gem"></i> حكمة سوفية</h2>
       <div id="info-panel">
         <p><strong>ID:</strong> <span id="node-id-display">-</span></p>
         <p><strong>Name:</strong> <span id="node-name-display">-</span></p>
@@ -71,12 +79,12 @@
         <p><strong>Description/Summary:</strong></p>
         <p id="node-description-display">-</p>
 
-        <h3><i class="fas fa-link"></i> Spiritual Connections:</h3>
+        <h3><i class="fas fa-link"></i> الاتصالات الروحية:</h3>
         <ul id="node-connections-list">
           <!-- Connected nodes will be listed here -->
         </ul>
 
-        <h3><i class="fas fa-scroll"></i> Related Passages:</h3>
+        <h3><i class="fas fa-scroll"></i> المقاطع ذات الصلة:</h3>
         <ul id="node-segments-list">
           <!-- Related segments will be listed here -->
         </ul>
@@ -85,9 +93,9 @@
   </div>
 
   <section id="tables-section">
-    <h2>Wisdom Catalog</h2>
+    <h2>كتالوج الحكمة</h2>
     <div class="table-container">
-      <h3><i class="fas fa-lightbulb"></i> Concepts</h3>
+      <h3><i class="fas fa-lightbulb"></i> المفاهيم</h3>
       <table id="concepts-table">
         <thead>
           <tr>
@@ -104,7 +112,7 @@
       </div>
     </div>
     <div class="table-container">
-      <h3><i class="fas fa-hands-praying"></i> Practices / Techniques</h3>
+      <h3><i class="fas fa-hands-praying"></i> الممارسات / التقنيات</h3>
       <table id="practices-table">
         <thead>
           <tr>
@@ -121,7 +129,7 @@
       </div>
     </div>
     <div class="table-container">
-      <h3><i class="fas fa-feather"></i> Analogies / Metaphors</h3>
+      <h3><i class="fas fa-feather"></i> التشابه / الاستعارة</h3>
       <table id="analogies-table">
         <thead>
           <tr>
@@ -138,7 +146,7 @@
       </div>
     </div>
     <div class="table-container">
-      <h3><i class="fas fa-quote-right"></i> Segments</h3>
+      <h3><i class="fas fa-quote-right"></i> المقاطع</h3>
       <table id="segments-table">
         <thead>
           <tr>
@@ -157,11 +165,11 @@
   </section>
 
   <div class="button-container">
-    <button id="exportJsonButton"><i class="fas fa-download"></i> Export Sacred Knowledge</button>
+    <button id="exportJsonButton"><i class="fas fa-download"></i> تصدير المعرفة المقدسة</button>
   </div>
 
   <footer>
-    <p>Journey through the realm of spiritual understanding</p>
+    <p>رحلة عبر عالم الفهم الروحي</p>
   </footer>
 
   <!-- Mobile Navigation Controls -->
