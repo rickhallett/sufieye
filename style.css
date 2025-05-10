@@ -2,63 +2,63 @@
 
 /* --- Global Resets & Typography --- */
 :root {
-  --color-primary: #271654;
-  /* Deep indigo/purple */
-  --color-secondary: #3c2a82;
-  /* Midnight blue/purple */
-  --color-accent: #c9a227;
-  /* Golden accent */
-  --color-accent-glow: #e9c761;
-  /* Brighter golden for glow */
+  --color-primary: #18103B;
+  /* Haiti - Deep royal purple */
+  --color-secondary: #3B1016;
+  /* Dark Sienna - Deep royal red */
+  --color-accent: #966720;
+  /* Golden Brown - Royal gold */
+  --color-accent-glow: #b7832e;
+  /* Lighter version of Golden Brown for glow effects */
   --color-light: #f5f1e3;
   /* Off-white/cream */
-  --color-dark: #1a1025;
-  /* Very dark purple/black */
-  --color-text: #e5e1d8;
+  --color-dark: #18103B;
+  /* Haiti - Deep royal purple for dark backgrounds */
+  --color-text: #f5f1e3;
   /* Cream-ish text on dark */
-  --color-text-dark: #241f35;
-  /* Dark purple text on light */
+  --color-text-dark: #18103B;
+  /* Haiti - Deep purple text on light */
 
-  --color-concept: #4f3a96;
-  /* Mystical purple */
-  --color-concept-glow: #6f5cac;
-  /* Glowing purple */
-  --color-practice: #118377;
-  /* Emerald green */
-  --color-practice-glow: #19a596;
-  /* Glowing emerald */
-  --color-analogy: #9b6b36;
-  /* Amber/Brown */
-  --color-analogy-glow: #bf8240;
-  /* Glowing amber */
-  --color-segment: #672d52;
-  /* Deep magenta */
-  --color-segment-glow: #8a3a6d;
-  /* Glowing magenta */
+  --color-concept: #18103B;
+  /* Haiti - Mystical purple */
+  --color-concept-glow: #291960;
+  /* Lighter version of Haiti for glow */
+  --color-practice: #103B26;
+  /* Phthalo Green - Deep spiritual green */
+  --color-practice-glow: #1a5c3b;
+  /* Lighter version of Phthalo Green */
+  --color-analogy: #966720;
+  /* Golden Brown - Royal gold */
+  --color-analogy-glow: #b7832e;
+  /* Lighter version of Golden Brown */
+  --color-segment: #3B1016;
+  /* Dark Sienna - Deep royal red */
+  --color-segment-glow: #5e1a23;
+  /* Lighter version of Dark Sienna */
 
   --font-heading: 'Reem Kufi', 'Aref Ruqaa', 'Playfair Display', serif;
   --font-body: 'Cormorant Garamond', Georgia, serif;
   --font-arabic: 'Amiri', 'Scheherazade New', serif;
 
-  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.15);
-  --shadow-intense: 0 8px 20px rgba(0, 0, 0, 0.25);
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-intense: 0 8px 20px rgba(0, 0, 0, 0.35);
 
-  --pattern-overlay: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --pattern-overlay: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23966720' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   --border-radius: 10px;
 }
 
 /* ---- Animations ---- */
 @keyframes gentle-glow {
   0% {
-    box-shadow: 0 0 5px rgba(201, 162, 39, 0.3), 0 0 10px rgba(201, 162, 39, 0.2);
+    box-shadow: 0 0 5px rgba(150, 103, 32, 0.3), 0 0 10px rgba(150, 103, 32, 0.2);
   }
 
   50% {
-    box-shadow: 0 0 10px rgba(201, 162, 39, 0.5), 0 0 15px rgba(201, 162, 39, 0.3);
+    box-shadow: 0 0 10px rgba(150, 103, 32, 0.5), 0 0 15px rgba(150, 103, 32, 0.3);
   }
 
   100% {
-    box-shadow: 0 0 5px rgba(201, 162, 39, 0.3), 0 0 10px rgba(201, 162, 39, 0.2);
+    box-shadow: 0 0 5px rgba(150, 103, 32, 0.3), 0 0 10px rgba(150, 103, 32, 0.2);
   }
 }
 

@@ -1,0 +1,45 @@
+{
+  "colors": [
+    {
+      "hex": "18103B",
+      "name": "Haiti",
+      "rgba": {
+        "alpha": 100,
+        "blue": 59,
+        "green": 16,
+        "red": 24
+      }
+    },
+    {
+      "hex": "3B1016",
+      "name": "Dark Sienna",
+      "rgba": {
+        "alpha": 100,
+        "blue": 22,
+        "green": 16,
+        "red": 59
+      }
+    },
+    {
+      "hex": "103B26",
+      "name": "Phthalo Green",
+      "rgba": {
+        "alpha": 100,
+        "blue": 38,
+        "green": 59,
+        "red": 16
+      }
+    },
+    {
+      "hex": "966720",
+      "name": "Golden Brown",
+      "rgba": {
+        "alpha": 100,
+        "blue": 32,
+        "green": 103,
+        "red": 150
+      }
+    }
+  ],
+  "name": "Palette"
+}

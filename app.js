@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- Color Settings ---
   const colors = {
-    concept: { background: '#4f3a96', border: '#6f5cac', highlight: { background: '#6f5cac', border: '#8c7cc2' }, hover: { background: '#6f5cac', border: '#8c7cc2' } },
-    practice: { background: '#118377', border: '#19a596', highlight: { background: '#19a596', border: '#25c3b4' }, hover: { background: '#19a596', border: '#25c3b4' } },
-    analogy: { background: '#9b6b36', border: '#bf8240', highlight: { background: '#bf8240', border: '#d79a5a' }, hover: { background: '#bf8240', border: '#d79a5a' } },
-    segment: { background: '#672d52', border: '#8a3a6d', highlight: { background: '#8a3a6d', border: '#a94c85' }, hover: { background: '#8a3a6d', border: '#a94c85' } }
+    concept: { background: '#18103B', border: '#291960', highlight: { background: '#291960', border: '#3a277e' }, hover: { background: '#291960', border: '#3a277e' } },
+    practice: { background: '#103B26', border: '#1a5c3b', highlight: { background: '#1a5c3b', border: '#256d4b' }, hover: { background: '#1a5c3b', border: '#256d4b' } },
+    analogy: { background: '#966720', border: '#b7832e', highlight: { background: '#b7832e', border: '#d69f3c' }, hover: { background: '#b7832e', border: '#d69f3c' } },
+    segment: { background: '#3B1016', border: '#5e1a23', highlight: { background: '#5e1a23', border: '#7d2531' }, hover: { background: '#5e1a23', border: '#7d2531' } }
   };
 
   // --- Fetch and Initialize ---
